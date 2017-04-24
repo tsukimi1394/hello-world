@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Cabin', Arial, sans-serif;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  padding: 50px;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+body .img {
+  width: 100%;
+  height: auto;
+}
+
+body figure {
+  margin: 20px;
+  box-shadow: 0 0 10px 5px #dddddd;
+  width: 25%;
+}
+
+body figcaption {
+  text-align: center;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=style.css.map */
