@@ -8,11 +8,11 @@ pug          = require('gulp-pug'),
 gcmq          = require('gulp-group-css-media-queries');
 
 gulp.task('views', function buildHTML() {
-  return gulp.src('views/*.pug')
+  return gulp.src('views/**/*.pug')
   .pipe(pug({
     pretty: true
 }))
-  .pipe(gulp.dest('./'));
+  .pipe(gulp.dest('./templates'));
 });
 
 gulp.task('build:sass', function () {
@@ -31,7 +31,7 @@ gulp.task('build:sass', function () {
  gulp.task('serve', ['build:sass','views'], function(){
    browser.init({
        server: {
-           baseDir: "./"
+           baseDir: "./templates"
        }
    });
 });
