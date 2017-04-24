@@ -1,0 +1,28 @@
+.comment {
+	display: flex;
+	justify-content: space-around;
+	margin: $normal-margin 0;
+	&-wrapper {
+		width: 50%;
+	}
+}
+
+.c-comment-field {
+	padding: $large-padding;
+	border: $border-width solid $grey;
+
+	border-radius: $smallest-border-radius;
+	outline: none;
+
+	color: $black;
+	font-family: $font-stack;
+	font-weight: bold;
+	font-size: $medium-font;
+	letter-spacing: $letter-spacing;
+	&.c-comment-field--focus {
+		border-color: $blue;
+	}
+	&:focus {
+		border-color: $blue;
+	}
+}

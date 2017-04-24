@@ -1,0 +1,217 @@
+.message {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: $normal-margin;
+}
+
+.c-button {
+	&.c--alignment {
+		background-color: $green;
+		&:hover {
+			background-color: $dark-green;
+		}
+		&:active {
+			background-color: $dark-dark-green;
+		}
+	}
+	&.c--button-ok {
+		position: relative;
+
+		width: $large-width;
+		padding: $normal-padding;
+
+		background-color: $green;
+
+		text-align: left;
+		&:hover {
+			background-color: $dark-green;
+		}
+		&:active {
+			background-color: $dark-dark-green;
+		}
+		&::after {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			right: 3%;
+
+			width: 7px;
+			height: 7px;
+			border-top: $border-width solid $white;
+			border-right: $border-width solid $white;
+
+			transform: translate(-50%, -75%) rotate(135deg);
+		}
+	}
+	&-square-icon {
+		&.c--alignment-left {
+			&::before {
+				width: $alignment-middle-width;
+			}
+			&::after {
+				width: $alignment-small-width;
+			}
+		}
+		&.c--alignment-center {
+			&::before {
+				left: 50%;
+
+				width: $alignment-middle-width;
+
+				transform: translate(-50%);
+			}
+			&::after {
+				left: 50%;
+
+				width: $alignment-small-center-width;
+
+				transform: translate(-50%);
+			}
+		}
+		&.c--alignment-right {
+			&::before {
+				left: 4px;
+
+				width: $alignment-middle-width;
+			}
+			&::after {
+				left: 10px;
+
+				width: $alignment-small-width;
+			}
+		}
+	}
+}
+
+.simple-message-wrapper {
+	width: 296px;
+	margin: $smallest-margin;
+}
+
+.c-simple-message {
+	width: 100%;
+	&__text {
+		width: 75%;
+		padding: $normal-padding;
+		border: $border-width solid $grey;
+		border-right: none;
+
+		border-radius: $smallest-border-radius 0 0 $smallest-border-radius;
+		outline: none;
+
+		color: $black;
+		font-weight: bold;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+	}
+	&__submit {
+		width: 25%;
+		padding: $normal-padding;
+		border: $border-width solid $green;
+
+		border-radius: 0 $smallest-border-radius $smallest-border-radius 0;
+		background-color: $green;
+		outline: none;
+
+		color: $white;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+		text-shadow: 0 0 1px $white;
+
+		cursor: pointer;
+		&:hover {
+			background-color: $dark-green;
+			border-color: $dark-green;
+		}
+		&:active {
+			background-color: $dark-dark-green;
+			border-color: $dark-dark-green;
+		}
+	}
+}
+
+.choose-message-wrapper {
+	width: 380px;
+}
+
+.c-choose-message {
+	position: relative;
+
+	width: 100%;
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: 47%;
+		left: 25%;
+
+		width: 7px;
+		height: 7px;
+		border-top: $border-width solid $white;
+		border-right: $border-width solid $white;
+
+		transform: translate(-25%, -50%) rotate(135deg);
+	}
+	&__select {
+		width: 30%;
+		padding: $normal-padding;
+		border: $border-width solid $green;
+
+		border-radius: $smallest-border-radius 0 0 $smallest-border-radius;
+		background-color: $green;
+		outline: none;
+
+		color: $white;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+		text-shadow: 0 0 1px $white;
+
+		cursor: pointer;
+
+		appearance: none;
+		&:hover {
+			background-color: $dark-green;
+			border-color: $dark-green;
+		}
+	}
+	&__text {
+		width: 50%;
+		padding: $normal-padding;
+		border: $border-width solid $grey;
+		border-right: none;
+		border-left: none;
+
+		outline: none;
+
+		color: $black;
+		font-weight: bold;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+	}
+	&__submit {
+		width: 20%;
+		padding: $normal-padding;
+		border: $border-width solid $green;
+
+		border-radius: 0 $smallest-border-radius $smallest-border-radius 0;
+		background-color: $green;
+		outline: none;
+
+		color: $white;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+		text-shadow: 0 0 1px $white;
+
+		cursor: pointer;
+		&:hover {
+			background-color: $dark-green;
+			border-color: $dark-green;
+		}
+		&:active {
+			background-color: $dark-dark-green;
+			border-color: $dark-dark-green;
+		}
+	}
+}

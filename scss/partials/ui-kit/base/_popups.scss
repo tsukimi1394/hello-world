@@ -1,0 +1,118 @@
+.popups {
+	display: flex;
+	justify-content: space-around;
+}
+
+.popup-wrapper {
+	width: 50%;
+	margin: $x-small-margin;
+}
+
+.c-popup {
+	position: relative;
+
+	width: 100%;
+	border: $border-width solid $black;
+
+	border-radius: $smallest-border-radius;
+	&.c-popup--dark {
+		background-color: $black;
+	}
+	&__header {
+		padding-top: $x-large-padding;
+		padding-left: $x-large-padding;
+
+		color: $black;
+		font-weight: bold;
+		font-size: $x-large-font;
+		letter-spacing: $letter-spacing;
+		&.c-popup--dark {
+			color: $white;
+			font-weight: normal;
+			text-shadow: 0 0 1px $white;
+		}
+	}
+	&__text {
+		padding: $large-padding $x-large-padding;
+
+		color: $black;
+		font-size: $medium-font;
+		letter-spacing: $letter-spacing;
+		&.c-popup--dark {
+			color: $white;
+		}
+	}
+}
+
+.close-icon {
+	&.c-popup--dark {
+		&::before {
+			background-color: $white;
+		}
+		&::after {
+			background-color: $white;
+		}
+	}
+}
+
+.popup-buttons-wrapper {
+	display: inline-block;
+	width: $min-width-small-button-other;
+	margin-bottom: $x-large-padding;
+	margin-left: $x-large-padding;
+}
+
+.c-button {
+	&.c-popup__yes {
+		background-color: $green;
+		&:hover {
+			background-color: $dark-green;
+		}
+		&:active {
+			background-color: $dark-dark-green;
+		}
+		&.c-popup--dark {
+			border: $border-width solid $green;
+
+			background-color: $black;
+
+			color: $green;
+			font-weight: bold;
+			text-shadow: none;
+			&:hover {
+				color: $light-green;
+				border-color: $light-green;
+			}
+			&:active {
+				color: $light-light-green;
+				border-color: $light-light-green;
+			}
+		}
+	}
+	&.c-popup__not {
+		background-color: $blue;
+		&:hover {
+			background-color: $dark-blue;
+		}
+		&:active {
+			background-color: $dark-dark-blue;
+		}
+		&.c-popup--dark {
+			border: $border-width solid $orange;
+
+			background-color: $black;
+
+			color: $orange;
+			font-weight: bold;
+			text-shadow: none;
+			&:hover {
+				color: $light-orange;
+				border-color: $light-orange;
+			}
+			&:active {
+				color: $light-light-orange;
+				border-color: $light-light-orange;
+			}
+		}
+	}
+}

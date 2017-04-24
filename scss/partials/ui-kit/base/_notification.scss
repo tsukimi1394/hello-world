@@ -1,0 +1,90 @@
+.notification {
+	margin: $normal-margin 0;
+}
+
+.c-notification {
+	position: relative;
+
+	margin-bottom: $x-small-margin;
+	padding: $large-padding;
+
+	border-radius: $smallest-border-radius;
+
+	color: $white;
+	font-size: $medium-font;
+	&.c--ok {
+		background-color: $green;
+	}
+	&.c--warning {
+		background-color: $orange;
+	}
+	&.c--error {
+		background-color: $red;
+	}
+	&-submit {
+		min-width: $min-width-small-button;
+		margin-top: $x-small-margin;
+		padding: $normal-padding $x-large-padding;
+		border: none;
+
+		border-radius: $smallest-border-radius;
+		background-color: rgba(255,255,255,.2);
+		outline: none;
+
+		color: $white;
+		font-weight: bold;
+		font-size: $small-font;
+		text-align: center;
+
+		cursor: pointer;
+		&:hover {
+			background-color: rgba(255,255,255,.3);
+		}
+		&:active {
+			background-color: rgba(255,255,255,.4);
+		}
+	}
+}
+
+.close-icon {
+	position: absolute;
+	top: 20px;
+	right: 5px;
+
+	width: 20px;
+	height: 20px;
+
+	cursor: pointer;
+	&::before {
+		content: '';
+
+		position: absolute;
+
+		width: 15px;
+		height: 2px;
+
+		background-color: $black;
+
+		transform: rotate(45deg);
+	}
+	&::after {
+		content: '';
+
+		position: absolute;
+
+		width: 15px;
+		height: 2px;
+
+		background-color: $black;
+
+		transform: rotate(-45deg);
+	}
+	&.c-notification-close {
+		&::before {
+			background-color: $white;
+		}
+		&::after {
+			background-color: $white;
+		}
+	}
+}
