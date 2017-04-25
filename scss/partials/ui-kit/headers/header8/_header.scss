@@ -13,7 +13,7 @@
 	padding-top: 48px;
 	padding-bottom: 85px;
 
-	background-image: url(../images/back.jpg);
+	background-image: url(../../../../../images/ui-kit/headers/header8/back.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -151,13 +151,13 @@
 			background-repeat: no-repeat;
 			background-position: 0 5px;
 			&.c--first {
-				background-image: url(../images/pencil-icon.png);
+				background-image: url(../../../../../images/ui-kit/headers/header8/pencil-icon.png);
 			}
 			&.c--second {
-				background-image: url(../images/brush-icon.png);
+				background-image: url(../../../../../images/ui-kit/headers/header8/brush-icon.png);
 			}
 			&.c--third {
-				background-image: url(../images/keyboard-icon.png);
+				background-image: url(../../../../../images/ui-kit/headers/header8/keyboard-icon.png);
 			}
 			&-title {
 				@include respond-to(handhelds) {
