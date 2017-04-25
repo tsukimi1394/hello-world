@@ -5,13 +5,31 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Cabin', Arial, sans-serif;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  padding: 20px;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.linka {
+img {
+  width: 100%;
+  height: 500px;
+}
+
+figure {
+  margin: 20px;
+  box-shadow: 0 0 10px 5px #dddddd;
+  width: 25%;
+}
+
+figcaption {
   text-align: center;
-  text-transform: uppercase;
-  font-size: 20px;
-  display: block;
+  margin-top: 15px;
 }
 /*# sourceMappingURL=style.css.map */

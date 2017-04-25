@@ -32,7 +32,7 @@ gulp.task('build:sass', function () {
    browser.init({
        server: {
            baseDir: ["./", "./templates"],
-           index: "templates/index.html"
+           index: "templates/ui-kite/index.html"
        }
    });
 });
