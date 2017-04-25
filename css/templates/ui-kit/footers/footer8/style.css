@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cabin", Arial, sans-serif;
+}
+
+.c-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 72px;
+  padding: 15px 120px;
+  background-color: #383737;
+}
+
+.c-footer__menu {
+  display: inline-block;
+}
+
+.c-footer__menu-item {
+  color: #fff;
+  font-size: 16px;
+  line-height: 2.25;
+  letter-spacing: 0.02rem;
+  text-decoration: none;
+}
+
+.c-footer__menu-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.c-footer__menu-item:hover {
+  text-decoration: underline;
+}
+
+.c-footer__copyright {
+  display: inline-block;
+  color: #838282;
+  font-size: 16px;
+  line-height: 2.25;
+  letter-spacing: 0.02rem;
+}
+
+.c-footer__social {
+  display: inline-block;
+}
+
+.c-footer__social-buttons {
+  display: inline-block;
+}
+
+.c-footer__social-item {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.c-footer__social-item-img {
+  width: auto;
+  height: 14px;
+}
+
+.c-footer__social-item:hover {
+  border: 1px solid #9c9b9b;
+  border-radius: 999rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .c-footer {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 200px;
+    padding: 15px;
+  }
+
+  .c-footer__menu {
+    text-align: center;
+  }
+
+  .c-footer__social {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .c-footer {
+    padding: 15px 60px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .c-footer {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 150px;
+    padding: 15px 30px;
+  }
+
+  .c-footer__menu {
+    text-align: center;
+  }
+
+  .c-footer__social {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

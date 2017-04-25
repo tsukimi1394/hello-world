@@ -1,0 +1,117 @@
+.c-header {
+	@include respond-to(medium-screens) {
+		padding-top: 60px;
+		padding-bottom: 80px;
+	}
+	@include respond-to(tablets) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	@include respond-to(handhelds) {
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
+
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	padding-top: 80px;
+	padding-bottom: 100px;
+
+	background-color: $orange;
+	&__header {
+		&-menu {
+			@include respond-to(tablets) {
+				margin-right: 40px;
+			}
+			@include respond-to(handhelds) {
+				margin-right: 20px;
+			}
+
+			margin-right: 120px;
+
+			text-align: right;
+			&-item {
+				@include respond-to(handhelds) {
+					margin: 10px;
+				}
+
+				margin: 20px;
+
+				color: $white;
+				font-size: $medium-font;
+				letter-spacing: $letter-spacing;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&__logo {
+		text-align: center;
+	}
+	&__main {
+		&-title {
+			@include respond-to(tablets) {
+				font-size: 28px;
+			}
+			@include respond-to(handhelds) {
+				padding: 0 50px;
+
+				font-size: 18px;
+			}
+
+			margin-bottom: 40px;
+			padding: 0 180px;
+
+			color: $white;
+			font-size: 36px;
+			line-height: 1.4;
+			letter-spacing: $letter-spacing;
+			text-align: center;
+		}
+	}
+}
+
+.c-button {
+	&.c-header__header-menu-item {
+		@include respond-to(medium-screens) {
+			top: 50px;
+		}
+		@include respond-to(tablets) {
+			top: 30px;
+			left: 40px;
+		}
+		@include respond-to(handhelds) {
+			top: 15px;
+			left: 15px;
+		}
+
+		position: absolute;
+		top: 70px;
+		left: 120px;
+
+		margin: 0;
+
+		background-color: transparent;
+		&:hover {
+			background-color: rgba(0, 0, 0, .5);
+		}
+	}
+	&.c-header__button {
+		background-color: $green;
+		&:hover {
+			background-color: $dark-green;
+		}
+	}
+}
+
+.button-wrapper {
+	display: block;
+	width: 140px;
+	margin: 0 auto;
+}

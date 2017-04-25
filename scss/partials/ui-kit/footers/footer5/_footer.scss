@@ -1,0 +1,278 @@
+.c-footer {
+	height: 409px;
+	&__subscribe {
+		@include respond-to(handhelds) {
+			height: 200px;
+		}
+		@include respond-to(tablets) {
+			height: 200px;
+		}
+
+		position: relative;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 120px;
+
+		background-color: $green;
+		&-wrapper {
+			@include respond-to(tablets) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			@include respond-to(handhelds) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			position: relative;
+		}
+		&-label {
+			@include respond-to(tablets) {
+				display: block;
+				margin-bottom: 10px;
+			}
+			@include respond-to(handhelds) {
+				display: block;
+				margin-bottom: 10px;
+			}
+
+			color: $white;
+			font-size: $medium-font;
+			line-height: 2.25;
+			letter-spacing: $letter-spacing;
+		}
+		&-input-wrapper {
+			@include respond-to(tablets) {
+				display: block;
+				margin-bottom: 20px;
+			}
+			@include respond-to(handhelds) {
+				display: block;
+				width: 255px;
+				margin-bottom: 20px;
+			}
+
+			display: inline-block;
+			width: 321px;
+			height: 48px;
+			margin-right: 20px;
+			margin-left: 15px;
+		}
+		&-input {
+			width: 100%;
+			height: 100%;
+			padding: 18px 50px;
+			border: 1px solid $white;
+
+			border-radius: $smallest-border-radius;
+			outline: none;
+
+			color: $black;
+			font-size: $medium-font;
+			&::placeholder {
+				color: $dark-grey;
+			}
+		}
+		&-submit {
+			@include respond-to(tablets) {
+				display: block;
+			}
+			@include respond-to(handhelds) {
+				display: block;
+			}
+
+			min-width: 178px;
+			padding: 12px;
+			border: 1px solid $orange;
+
+			border-radius: $smallest-border-radius;
+			background-color: $orange;
+			outline: none;
+
+			color: $white;
+			font-size: $medium-font;
+			line-height: 1.5;
+			letter-spacing: $letter-spacing;
+			&:hover {
+				border-color: $dark-orange;
+
+				background-color: $dark-orange;
+
+				cursor: pointer;
+			}
+		}
+	}
+	&__main {
+		@include respond-to(medium-screens) {
+			padding: 50px 60px;
+		}
+		@include respond-to(tablets) {
+			flex-flow: wrap;
+			justify-content: center;
+			height: 710px;
+			padding: 50px 40px;
+		}
+		@include respond-to(handhelds) {
+			flex-flow: wrap;
+			justify-content: center;
+			align-items: center;
+			height: 820px;
+			padding: 50px 40px;
+		}
+
+		display: flex;
+		justify-content: space-between;
+		height: 289px;
+		padding: 50px 80px;
+
+		background-color: #f2f5f8;
+		&-logo {
+			@include respond-to(handhelds) {
+				margin-bottom: 20px;
+
+				text-align: center;
+			}
+
+			width: 150px;
+		}
+		&-menu-item {
+			@include respond-to(tablets) {
+				margin-bottom: 30px;
+			}
+			@include respond-to(handhelds) {
+				margin-bottom: 30px;
+			}
+
+			display: block;
+			width: 150px;
+		}
+		&-menu-subitem {
+			display: block;
+
+			color: $dark-grey;
+			font-size: $medium-font;
+			line-height: 2;
+			letter-spacing: $letter-spacing;
+			text-decoration: none;
+			&:first-child {
+				color: $black;
+
+				pointer-events: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&-map {
+			width: 300px;
+			margin-bottom: 30px;
+		}
+		&-copyright {
+			@include respond-to(handhelds) {
+				text-align: center;
+			}
+
+			width: 250px;
+			&-copy {
+				display: block;
+
+				color: $black;
+				font-size: $medium-font;
+				line-height: 2.25;
+				letter-spacing: $letter-spacing;
+			}
+			&-contact {
+				display: block;
+
+				color: $dark-grey;
+				font-size: $medium-font;
+				line-height: 1.375;
+				letter-spacing: $letter-spacing;
+				text-decoration: none;
+
+				cursor: default;
+			}
+		}
+	}
+}
+
+.mail-icon {
+	position: absolute;
+
+	width: 20px;
+	height: 14px;
+	border: solid 1px $black;
+
+	border-radius: 1px;
+	border-radius: 2px;
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: -5px;
+		left: 9px;
+
+		width: 1px;
+		height: 12px;
+
+		background-color: $black;
+
+		transform: rotate(-54deg);
+		transform-origin: bottom;
+	}
+	&::after {
+		content: '';
+
+		position: absolute;
+		top: -5px;
+		left: 8px;
+
+		width: 1px;
+		height: 12px;
+
+		background-color: $black;
+
+		transform: rotate(54deg);
+		transform-origin: bottom;
+	}
+	&.c-footer__subscribe-mail-icon {
+		@include respond-to(tablets) {
+			left: 9%;
+
+			transform: translateY(-140%);
+		}
+		@include respond-to(handhelds) {
+			left: 9%;
+
+			transform: translateY(-140%);
+		}
+
+		top: 50%;
+		left: 30%;
+
+		border-color: $white;
+
+		background-color: $orange;
+
+		transform: translateY(-50%);
+		&::before {
+			background-color: $white;
+		}
+		&::after {
+			background-color: $white;
+		}
+	}
+}
+
+.button-wrapper {
+	&.c-footer__main-copyright-button {
+		min-width: 100px;
+		margin-top: 55px;
+	}
+}

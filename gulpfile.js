@@ -31,7 +31,8 @@ gulp.task('build:sass', function () {
  gulp.task('serve', ['build:sass','views'], function(){
    browser.init({
        server: {
-           baseDir: "./templates"
+           baseDir: ["./", "./templates"],
+           index: "templates/index.html"
        }
    });
 });
@@ -39,6 +40,6 @@ gulp.task('build:sass', function () {
  // Runs all of the above tasks and then waits for files to change
  gulp.task('default', ['serve'], function() {
    gulp.watch(['scss/**/*.scss'], ['build:sass']);
-   gulp.watch(['views/*.pug'],['views']);  
+   gulp.watch(['views/*.pug'], ['views']);  
    gulp.watch('./**/*.html').on('change', browser.reload);
 });

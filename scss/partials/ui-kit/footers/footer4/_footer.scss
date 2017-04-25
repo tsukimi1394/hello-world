@@ -1,0 +1,142 @@
+.c-footer {
+	@include respond-to(tablets) {
+		flex-flow: wrap;
+		justify-content: center;
+		align-content: center;
+		height: 850px;
+		padding: 40px;
+	}
+	@include respond-to(handhelds) {
+		flex-flow: wrap;
+		justify-content: center;
+		align-content: center;
+		height: 900px;
+		padding: 40px 20px;
+	}
+
+	display: flex;
+	justify-content: space-between;
+	height: 288px;
+	padding: 40px 120px;
+
+	background-color: #f2f5f8;
+	&__logo {
+		@include respond-to(tablets) {
+			order: 1;
+			margin-right: 20%;
+			margin-bottom: 80px;
+		}
+		@include respond-to(handhelds) {
+			order: 1;
+			margin-bottom: 80px;
+		}
+
+		width: 75px;
+	}
+	&__contact {
+		@include respond-to(tablets) {
+			order: 3;
+			margin-right: 20%;
+			margin-bottom: 80px;
+		}
+		@include respond-to(handhelds) {
+			order: 3;
+			width: 270px;
+			margin-bottom: 80px;
+		}
+
+		width: 200px;
+		&-title {
+			color: $black;
+			font-size: $medium-font;
+			line-height: 2.25;
+			letter-spacing: $letter-spacing;
+		}
+		&-info {
+			display: block;
+			margin-bottom: 20px;
+
+			color: $dark-grey;
+			font-size: $medium-font;
+			line-height: 1.375;
+			letter-spacing: $letter-spacing;
+			text-decoration: none;
+
+			cursor: default;
+		}
+	}
+	&__info {
+		@include respond-to(tablets) {
+			order: 2;
+			margin-bottom: 80px;
+		}
+		@include respond-to(handhelds) {
+			order: 2;
+			margin-bottom: 80px;
+		}
+
+		width: 270px;
+		&-title {
+			color: $black;
+			font-size: $medium-font;
+			line-height: 2.25;
+			letter-spacing: $letter-spacing;
+		}
+		&-text {
+			display: block;
+
+			color: $dark-grey;
+			font-size: $medium-font;
+			line-height: 1.375;
+			letter-spacing: $letter-spacing;
+		}
+	}
+	&__app {
+		@include respond-to(tablets) {
+			order: 4;
+		}
+		@include respond-to(handhelds) {
+			order: 4;
+			width: 270px;
+			margin-bottom: 80px;
+
+			text-align: center;
+		}
+
+		width: 150px;
+		&-title {
+			color: $black;
+			font-size: $medium-font;
+			line-height: 2.25;
+			letter-spacing: $letter-spacing;
+		}
+		&-link {
+			display: block;
+			margin-left: 20px;
+
+			color: $blue;
+			font-size: $medium-font;
+			line-height: 1.375;
+			letter-spacing: $letter-spacing;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.button-wrapper {
+	&.c-footer__app-button {
+		margin: 10px 0 20px;
+	}
+}
+
+.c-button {
+	&.c-footer__app-button {
+		background-color: $green;
+		&:hover {
+			background-color: $dark-green;
+		}
+	}
+}

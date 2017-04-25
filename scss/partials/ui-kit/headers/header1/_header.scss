@@ -1,0 +1,125 @@
+.c-header {
+	@include respond-to(handhelds) {
+		padding: 30px 0;
+	}
+	@include respond-to(tablets) {
+		padding: 40px 0;
+	}
+
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	padding: 80px 0 110px;
+
+	background-image: url(../images/back.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	&__header {
+		&-logo {
+			@include respond-to(tablets) {
+				top: 40px;
+				left: 60px;
+			}
+			@include respond-to(handhelds) {
+				top: 30%;
+				left: 50%;
+
+				transform: translateX(-50%);
+			}
+
+			position: absolute;
+			top: 80px;
+			left: 120px;
+		}
+		&-menu {
+			@include respond-to(tablets) {
+				margin-right: 60px;
+				margin-left: 100px;
+			}
+			@include respond-to(handhelds) {
+				margin-right: 30px;
+			}
+
+			margin-right: 120px;
+
+			text-align: right;
+			&-item {
+				@include respond-to(tablets) {
+					margin: 10px;
+				}
+				@include respond-to(handhelds) {
+					margin: 10px;
+
+					font-size: $small-font;
+				}
+
+				margin: 20px;
+
+				color: $white;
+				font-size: $medium-font;
+				letter-spacing: $letter-spacing;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&__main {
+		&-title {
+			@include respond-to(handhelds) {
+				margin-right: 50px;
+				margin-left: 30px;
+
+				font-size: 24px;
+			}
+			@include respond-to(tablets) {
+				margin-right: 100px;
+				margin-left: 60px;
+			}
+
+			margin-right: 210px;
+			margin-left: 120px;
+
+			color: $white;
+			font-size: 36px;
+			letter-spacing: $letter-spacing;
+		}
+		&-subtitle {
+			@include respond-to(tablets) {
+				margin-right: 100px;
+				margin-left: 60px;
+			}
+			@include respond-to(handhelds) {
+				margin-top: 20px;
+				margin-right: 50px;
+				margin-left: 30px;
+
+				font-size: $medium-font;
+			}
+
+			margin-top: 30px;
+			margin-right: 210px;
+			margin-left: 120px;
+
+			color: $white;
+			font-size: 18px;
+			letter-spacing: $letter-spacing;
+		}
+	}
+}
+
+.c-button {
+	&.c-header__header-menu-item {
+		margin: 0;
+
+		background-color: transparent;
+		&:hover {
+			background-color: rgba(0, 0, 0, .5);
+		}
+	}
+}

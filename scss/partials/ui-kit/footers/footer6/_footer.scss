@@ -1,0 +1,130 @@
+.c-footer {
+	@include respond-to(tablets) {
+		height: 225px;
+	}
+	@include respond-to(handhelds) {
+		height: 250px;
+	}
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 192px;
+	padding: 15px;
+
+	background-color: $black;
+	&__menu {
+		display: block;
+
+		text-align: center;
+		&-item {
+			display: inline-block;
+
+			color: $white;
+			font-size: $medium-font;
+			line-height: 2.25;
+			letter-spacing: $letter-spacing;
+			text-decoration: none;
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__social {
+		margin-top: 30px;
+
+		text-align: center;
+		&-item {
+			width: 36px;
+			height: 36px;
+			border: 1px solid;
+
+			border-radius: $round-border-radius;
+			outline: none;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+			&.c--facebook {
+				border-color: #3162a2;
+
+				background-color: #3162a2;
+				&:hover {
+					border-color: #235493;
+
+					background-color: #235493;
+
+					cursor: pointer;
+				}
+			}
+			&.c--twitter {
+				border-color: #2eb1eb;
+
+				background-color: #2eb1eb;
+				&:hover {
+					border-color: #209dd4;
+
+					background-color: #209dd4;
+
+					cursor: pointer;
+				}
+			}
+			&.c--dribbble {
+				border-color: #f552b6;
+
+				background-color: #f552b6;
+				&:hover {
+					border-color: #d43b99;
+
+					background-color: #d43b99;
+
+					cursor: pointer;
+				}
+			}
+			&.c--vimeo {
+				border-color: #3498b9;
+
+				background-color: #3498b9;
+				&:hover {
+					border-color: #2485a5;
+
+					background-color: #2485a5;
+
+					cursor: pointer;
+				}
+			}
+			&.c--google-plus {
+				border-color: #f25c58;
+
+				background-color: #f25c58;
+				&:hover {
+					border-color: #d24440;
+
+					background-color: #d24440;
+
+					cursor: pointer;
+				}
+			}
+			&-img {
+				width: auto;
+				height: 16px;
+
+				vertical-align: middle;
+			}
+		}
+	}
+	&__copyright {
+		margin-top: 30px;
+
+		text-align: center;
+		&-copy {
+			color: #838282;
+			font-size: $small-font;
+			line-height: 2.57;
+			letter-spacing: $letter-spacing;
+		}
+	}
+}
