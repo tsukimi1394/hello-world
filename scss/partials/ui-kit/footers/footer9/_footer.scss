@@ -58,7 +58,6 @@
 			color: $white;
 			line-height: 2.25;
 			letter-spacing: 0.05rem;
-
 			pointer-events: none;
 		}
 		&:hover {
@@ -68,98 +67,7 @@
 	&__other {
 		width: 260px;
 	}
-	&__subscribe {
-		margin-bottom: 40px;
-		&-wrapper {
-			@include respond-to(handhelds) {
-				display: flex;
-				justify-content: center;
-			}
-		}
-		&-title {
-			display: block;
-
-			color: $white;
-			font-size: $medium-font;
-			line-height: 2.25;
-			letter-spacing: 0.05rem;
-		}
-		&-text {
-			display: block;
-			margin-bottom: 15px;
-
-			color: #9d9d9e;
-			font-size: $medium-font;
-			line-height: 1.25;
-			letter-spacing: $letter-spacing;
-		}
-		&-input-wrapper {
-			display: inline-block;
-			width: 202px;
-			height: 36px;
-			margin-right: 10px;
-		}
-		&-input {
-			width: 100%;
-			height: 100%;
-			padding: 10px;
-			border: 1px solid transparent;
-
-			border-radius: $smallest-border-radius;
-			background-color: $white;
-			outline: none;
-
-			color: $black;
-			font-weight: bold;
-			font-size: $small-font;
-			line-height: 1.71;
-			letter-spacing: $letter-spacing;
-			&::placeholder {
-				color: $dark-grey;
-			}
-		}
-		&-submit-wrapper {
-			position: relative;
-
-			display: inline-block;
-			width: 36px;
-			height: 36px;
-
-			vertical-align: bottom;
-			&::before {
-				content: '';
-
-				position: absolute;
-				top: 50%;
-				left: calc(50% - 1px);
-
-				width: 5px;
-				height: 5px;
-				border-top: solid $border-width $white;
-				border-right: solid $border-width $white;
-
-				transform: translate(-50%, -50%) rotate(45deg);
-				transform-origin: center;
-			}
-		}
-		&-submit {
-			width: 100%;
-			height: 100%;
-			border: 1px solid transparent;
-
-			border-radius: $smallest-border-radius;
-			background-color: $green;
-			outline: none;
-			&:hover {
-				border-color: $dark-green;
-
-				background-color: $dark-green;
-
-				cursor: pointer;
-			}
-		}
-	}
-	&__social {
+	.c-social {
 		&-title {
 			display: block;
 			margin-bottom: 10px;
@@ -170,13 +78,14 @@
 			letter-spacing: 0.05rem;
 		}
 		&-item {
+			padding: 9px;
 			border: 1px solid transparent;
 
 			background-color: transparent;
 			outline: none;
-			padding: 9px;
-			font-size: 14px;
+
 			color: $dark-grey;
+			font-size: 14px;
 			text-decoration: none;
 			&:not(:last-child) {
 				margin-right: 10px;
@@ -191,6 +100,101 @@
 
 				cursor: pointer;
 			}
+		}
+	}
+}
+
+.c__subscribe-box {
+	margin-bottom: 40px;
+	&-wrapper {
+		@include respond-to(handhelds) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	&-title {
+		display: block;
+
+		color: $white;
+		font-size: $medium-font;
+		line-height: 2.25;
+		letter-spacing: 0.05rem;
+	}
+	&-text {
+		display: block;
+		margin-bottom: 15px;
+
+		color: #9d9d9e;
+		font-size: $medium-font;
+		line-height: 1.25;
+		letter-spacing: $letter-spacing;
+	}
+	&-input-wrapper {
+		display: inline-block;
+		width: 202px;
+		height: 36px;
+		margin-right: 10px;
+	}
+	&-input {
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+		border: 1px solid transparent;
+
+		border-radius: $smallest-border-radius;
+		background-color: $white;
+		outline: none;
+
+		color: $black;
+		font-weight: bold;
+		font-size: $small-font;
+		line-height: 1.71;
+		letter-spacing: $letter-spacing;
+		&:focus {
+			border-color: $green;
+		}
+		&::placeholder {
+			color: $light-black;
+		}
+	}
+	&-submit-wrapper {
+		position: relative;
+
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+
+		vertical-align: bottom;
+		&::before {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			width: 5px;
+			height: 5px;
+			border-top: solid $border-width $white;
+			border-right: solid $border-width $white;
+
+			transform: translate(-50%, -50%) rotate(45deg);
+			transform-origin: center;
+		}
+	}
+	&-submit {
+		width: 100%;
+		height: 100%;
+		border: 1px solid transparent;
+
+		border-radius: $smallest-border-radius;
+		background-color: $green;
+		outline: none;
+		&:hover {
+			border-color: $dark-green;
+
+			background-color: $dark-green;
+
+			cursor: pointer;
 		}
 	}
 }

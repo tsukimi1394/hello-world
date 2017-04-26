@@ -39,7 +39,6 @@
 		text-decoration: none;
 		&:first-child {
 			color: $black;
-
 			pointer-events: none;
 		}
 		&:hover {
@@ -53,7 +52,7 @@
 		@include respond-to(tablets) {
 			text-align: center;
 		}
-		&-logo-img {
+		.c-logo-img {
 			@include respond-to(handhelds) {
 				display: inline-block;
 			}

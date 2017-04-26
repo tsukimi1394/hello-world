@@ -45,7 +45,6 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   width: 56%;
-  height: 96px;
   margin-bottom: 75px;
   padding: 24px;
   border: 1px solid transparent;
@@ -53,10 +52,9 @@ body {
   background-color: #f2f5f8;
 }
 
-.c-footer__form-input-wrapper {
-  display: inline-block;
-  width: 100%;
-  height: 48px;
+.c-footer__form-wrapper-item {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .c-footer__form-input-wrapper:first-child {
@@ -72,10 +70,12 @@ body {
   background-color: #fff;
   outline: none;
   color: #383737;
-  font-weight: bold;
   font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.02rem;
+}
+
+.c-footer__form-input:focus {
+  border-color: #d9c26c;
 }
 
 .c-footer__form-input::-webkit-input-placeholder {
@@ -91,9 +91,7 @@ body {
 }
 
 .c-footer__form-submit-wrapper {
-  display: inline-block;
   width: 140px;
-  height: 48px;
   margin-left: 10px;
 }
 
@@ -146,30 +144,33 @@ body {
   letter-spacing: 0.02rem;
 }
 
-@media only screen and (min-width: 1025px) {
-  .c-footer__form-input-wrapper {
-    width: 220px;
-  }
-}
-
 @media only screen and (max-width: 425px) {
   .c-footer {
     height: 650px;
   }
 
   .c-footer__form-wrapper {
-    -ms-flex-flow: wrap;
-    flex-flow: wrap;
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-align: center;
     align-items: center;
-    height: 210px;
     padding: 12px;
+  }
+
+  .c-footer__form-wrapper-item {
+    width: 100%;
   }
 
   .c-footer__form-input-wrapper {
     margin-bottom: 20px;
+  }
+
+  .c-footer__form-input-wrapper:first-child {
+    margin-right: 0;
+  }
+
+  .c-footer__form-submit-wrapper {
+    margin-left: 0;
   }
 
   .c-footer__menu-item:not(:last-child) {
@@ -183,26 +184,28 @@ body {
   }
 
   .c-footer__form-wrapper {
-    -ms-flex-flow: wrap;
-    flex-flow: wrap;
     -ms-flex-direction: column;
     flex-direction: column;
-    height: 150px;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 12px;
   }
 
+  .c-footer__form-wrapper-item {
+    width: 100%;
+  }
+
   .c-footer__form-input-wrapper {
-    width: 220px;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .c-footer__form-input-wrapper:first-child {
-    margin-bottom: 20px;
+    margin-right: 0;
   }
-}
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .c-footer__form-input-wrapper {
-    width: 220px;
+  .c-footer__form-submit-wrapper {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

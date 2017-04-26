@@ -1,113 +1,5 @@
 .c-footer {
 	height: 409px;
-	&__subscribe {
-		@include respond-to(handhelds) {
-			height: 200px;
-		}
-		@include respond-to(tablets) {
-			height: 200px;
-		}
-
-		position: relative;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 120px;
-
-		background-color: $green;
-		&-wrapper {
-			@include respond-to(tablets) {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-			}
-			@include respond-to(handhelds) {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-			}
-
-			position: relative;
-		}
-		&-label {
-			@include respond-to(tablets) {
-				display: block;
-				margin-bottom: 10px;
-			}
-			@include respond-to(handhelds) {
-				display: block;
-				margin-bottom: 10px;
-			}
-
-			color: $white;
-			font-size: $medium-font;
-			line-height: 2.25;
-			letter-spacing: $letter-spacing;
-		}
-		&-input-wrapper {
-			@include respond-to(tablets) {
-				display: block;
-				margin-bottom: 20px;
-			}
-			@include respond-to(handhelds) {
-				display: block;
-				width: 255px;
-				margin-bottom: 20px;
-			}
-
-			display: inline-block;
-			width: 321px;
-			height: 48px;
-			margin-right: 20px;
-			margin-left: 15px;
-		}
-		&-input {
-			width: 100%;
-			height: 100%;
-			padding: 18px 50px;
-			border: 1px solid $white;
-
-			border-radius: $smallest-border-radius;
-			outline: none;
-
-			color: $black;
-			font-size: $medium-font;
-			&::placeholder {
-				color: $dark-grey;
-			}
-		}
-		&-submit {
-			@include respond-to(tablets) {
-				display: block;
-			}
-			@include respond-to(handhelds) {
-				display: block;
-			}
-
-			min-width: 178px;
-			padding: 12px;
-			border: 1px solid $orange;
-
-			border-radius: $smallest-border-radius;
-			background-color: $orange;
-			outline: none;
-
-			color: $white;
-			font-size: $medium-font;
-			line-height: 1.5;
-			letter-spacing: $letter-spacing;
-			&:hover {
-				border-color: $dark-orange;
-
-				background-color: $dark-orange;
-
-				cursor: pointer;
-			}
-		}
-	}
 	&__main {
 		@include respond-to(medium-screens) {
 			padding: 50px 60px;
@@ -202,6 +94,118 @@
 	}
 }
 
+.c__subscribe-box {
+	@include respond-to(handhelds) {
+		height: 200px;
+	}
+	@include respond-to(tablets) {
+		height: 200px;
+	}
+
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 120px;
+
+	background-color: $green;
+	&-wrapper {
+		@include respond-to(tablets) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		@include respond-to(handhelds) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&-label {
+		@include respond-to(tablets) {
+			display: block;
+			margin-bottom: 10px;
+		}
+		@include respond-to(handhelds) {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		color: $white;
+		font-size: $medium-font;
+		line-height: 2.25;
+		letter-spacing: $letter-spacing;
+	}
+	&-input-wrapper {
+		@include respond-to(tablets) {
+			display: block;
+			margin-bottom: 20px;
+		}
+		@include respond-to(handhelds) {
+			display: block;
+			width: 255px;
+			margin-bottom: 20px;
+		}
+
+		position: relative;
+
+		display: inline-block;
+		width: 321px;
+		height: 48px;
+		margin-right: 20px;
+		margin-left: 15px;
+	}
+	&-input {
+		width: 100%;
+		height: 100%;
+		padding: 18px 50px;
+		border: 1px solid $white;
+
+		border-radius: $smallest-border-radius;
+		outline: none;
+
+		color: $black;
+		font-size: $medium-font;
+		&:focus {
+			border-color: $orange;
+		}
+		&::placeholder {
+			color: $dark-grey;
+		}
+	}
+	&-submit {
+		@include respond-to(tablets) {
+			display: block;
+		}
+		@include respond-to(handhelds) {
+			display: block;
+		}
+
+		min-width: 178px;
+		padding: 12px;
+		border: 1px solid $orange;
+
+		border-radius: $smallest-border-radius;
+		background-color: $orange;
+		outline: none;
+
+		color: $white;
+		font-size: $medium-font;
+		line-height: 1.5;
+		letter-spacing: $letter-spacing;
+		&:hover {
+			border-color: $dark-orange;
+
+			background-color: $dark-orange;
+
+			cursor: pointer;
+		}
+	}
+}
+
 .mail-icon {
 	position: absolute;
 
@@ -241,26 +245,17 @@
 		transform: rotate(54deg);
 		transform-origin: bottom;
 	}
-	&.c-footer__subscribe-mail-icon {
-		@include respond-to(tablets) {
-			left: 9%;
-
-			transform: translateY(-140%);
-		}
-		@include respond-to(handhelds) {
-			left: 9%;
-
-			transform: translateY(-140%);
-		}
-
+	&.c__subscribe-box-mail-icon {
 		top: 50%;
-		left: 30%;
+		left: 16px;
 
 		border-color: $white;
 
 		background-color: $orange;
 
 		transform: translateY(-50%);
+
+		pointer-events: none;
 		&::before {
 			background-color: $white;
 		}
@@ -274,5 +269,14 @@
 	&.c-footer__main-copyright-button {
 		min-width: 100px;
 		margin-top: 55px;
+	}
+}
+
+.c-button {
+	&.c__subscribe-box-button {
+		background-color: $orange;
+		&:hover {
+			background-color: $dark-orange;
+		}
 	}
 }

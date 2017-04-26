@@ -44,7 +44,7 @@ body {
   text-decoration: underline;
 }
 
-.c-footer__copyright-logo-img {
+.c-footer__copyright .c-logo-img {
   display: block;
 }
 
@@ -87,7 +87,7 @@ body {
     text-align: center;
   }
 
-  .c-footer__copyright-logo-img {
+  .c-footer__copyright .c-logo-img {
     display: inline-block;
   }
 }
@@ -109,7 +109,7 @@ body {
     text-align: center;
   }
 
-  .c-footer__copyright-logo-img {
+  .c-footer__copyright .c-logo-img {
     display: inline-block;
   }
 }

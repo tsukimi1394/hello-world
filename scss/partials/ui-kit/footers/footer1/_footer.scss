@@ -8,16 +8,15 @@
 		flex-direction: column;
 		align-items: center;
 		height: 325px;
-		&__logo-img {
-			text-align: center;
-		}
 	}
-
 	display: flex;
 	justify-content: space-between;
 	height: 168px;
 
 	background-color: #f2f5f8;
+	.c-logo-img {
+		text-align: center;
+	}
 	&__logo-menu {
 		@include respond-to(handhelds) {
 			display: flex;
@@ -69,7 +68,7 @@
 			}
 		}
 	}
-	&__social {
+	.c-social {
 		@include respond-to(tablets) {
 			display: block;
 		}

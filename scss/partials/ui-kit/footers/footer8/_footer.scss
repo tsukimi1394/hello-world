@@ -52,7 +52,7 @@
 		line-height: 2.25;
 		letter-spacing: $letter-spacing;
 	}
-	&__social {
+	.c-social {
 		@include respond-to(tablets) {
 			display: flex;
 			flex-flow: wrap;

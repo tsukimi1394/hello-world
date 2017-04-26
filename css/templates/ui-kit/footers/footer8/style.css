@@ -88,15 +88,15 @@ body {
   letter-spacing: 0.02rem;
 }
 
-.c-footer__social {
+.c-footer .c-social {
   display: inline-block;
 }
 
-.c-footer__social-buttons {
+.c-footer .c-social-buttons {
   display: inline-block;
 }
 
-.c-footer__social-item {
+.c-footer .c-social-item {
   padding: 9px;
   border: none;
   border: 1px solid transparent;
@@ -107,7 +107,7 @@ body {
   text-decoration: none;
 }
 
-.c-footer__social-item:hover {
+.c-footer .c-social-item:hover {
   border-color: #9c9b9b;
   border-radius: 999rem;
 }
@@ -126,7 +126,7 @@ body {
     text-align: center;
   }
 
-  .c-footer__social {
+  .c-footer .c-social {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: wrap;
@@ -156,7 +156,7 @@ body {
     text-align: center;
   }
 
-  .c-footer__social {
+  .c-footer .c-social {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: wrap;

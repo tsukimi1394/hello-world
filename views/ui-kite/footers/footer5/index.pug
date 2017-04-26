@@ -6,17 +6,18 @@ html(lang="en")
 		link(href="https://fonts.googleapis.com/css?family=Cabin:600", rel="stylesheet")
 		link(rel="stylesheet", type= "text/css", href="../../../../css/templates/ui-kit/footers/footer5/style.css")
 	body
-		section(class="c-footer")
-			div(class="c-footer__subscribe")
-				form(class="c-footer__subscribe-wrapper")
-					label(for="subscribe", class="c-footer__subscribe-label") Subscribe our newsletters
-					div(class="c-footer__subscribe-input-wrapper")
-						input(type="text", name="subscribe", id="subscribe", placeholder="Your e-mail here" class="c-footer__subscribe-input")
-					div(class="mail-icon c-footer__subscribe-mail-icon")
-					input(type="submit", value="Subscribe", class="c-footer__subscribe-submit")
+		footer(class="c-footer")
+			div(class="c__subscribe-box")
+				form(class="c__subscribe-box-wrapper")
+					label(for="subscribe", class="c__subscribe-box-label") Subscribe our newsletters
+					div(class="c__subscribe-box-input-wrapper")
+						input(type="email", name="subscribe", id="subscribe", placeholder="Your e-mail here" class="c__subscribe-box-input")
+						div(class="mail-icon c__subscribe-box-mail-icon")
+					div(class="button-wrapper c__subscribe-box-button")
+						button(class="c-button c--button-rounded c__subscribe-box-button") Subscribe
 			div(class="c-footer__main")
 				div(class="c-footer__main-logo")
-					img(src="../../../../images/ui-kit/logo.png", alt="logo", class="c-footer__main-logo-img")
+					img(src="../../../../images/ui-kit/logo.png", alt="logo", class="c-logo-img")
 				nav(class="c-footer__main-menu-item")
 					a(href="#", class="c-footer__main-menu-subitem") Services
 					a(href="#", class="c-footer__main-menu-subitem") Branding

@@ -270,79 +270,6 @@ body {
   height: 409px;
 }
 
-.c-footer__subscribe {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 120px;
-  background-color: #24aa98;
-}
-
-.c-footer__subscribe-wrapper {
-  position: relative;
-}
-
-.c-footer__subscribe-label {
-  color: #fff;
-  font-size: 16px;
-  line-height: 2.25;
-  letter-spacing: 0.02rem;
-}
-
-.c-footer__subscribe-input-wrapper {
-  display: inline-block;
-  width: 321px;
-  height: 48px;
-  margin-right: 20px;
-  margin-left: 15px;
-}
-
-.c-footer__subscribe-input {
-  width: 100%;
-  height: 100%;
-  padding: 18px 50px;
-  border: 1px solid #fff;
-  border-radius: 6px;
-  outline: none;
-  color: #383737;
-  font-size: 16px;
-}
-
-.c-footer__subscribe-input::-webkit-input-placeholder {
-  color: #b4bbc2;
-}
-
-.c-footer__subscribe-input:-ms-input-placeholder {
-  color: #b4bbc2;
-}
-
-.c-footer__subscribe-input::placeholder {
-  color: #b4bbc2;
-}
-
-.c-footer__subscribe-submit {
-  min-width: 178px;
-  padding: 12px;
-  border: 1px solid #d9c26c;
-  border-radius: 6px;
-  background-color: #d9c26c;
-  outline: none;
-  color: #fff;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02rem;
-}
-
-.c-footer__subscribe-submit:hover {
-  border-color: #c9b248;
-  background-color: #c9b248;
-  cursor: pointer;
-}
-
 .c-footer__main {
   display: -ms-flexbox;
   display: flex;
@@ -407,6 +334,80 @@ body {
   cursor: default;
 }
 
+.c__subscribe-box {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 120px;
+  background-color: #24aa98;
+}
+
+.c__subscribe-box-label {
+  color: #fff;
+  font-size: 16px;
+  line-height: 2.25;
+  letter-spacing: 0.02rem;
+}
+
+.c__subscribe-box-input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 321px;
+  height: 48px;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.c__subscribe-box-input {
+  width: 100%;
+  height: 100%;
+  padding: 18px 50px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  outline: none;
+  color: #383737;
+  font-size: 16px;
+}
+
+.c__subscribe-box-input:focus {
+  border-color: #d9c26c;
+}
+
+.c__subscribe-box-input::-webkit-input-placeholder {
+  color: #b4bbc2;
+}
+
+.c__subscribe-box-input:-ms-input-placeholder {
+  color: #b4bbc2;
+}
+
+.c__subscribe-box-input::placeholder {
+  color: #b4bbc2;
+}
+
+.c__subscribe-box-submit {
+  min-width: 178px;
+  padding: 12px;
+  border: 1px solid #d9c26c;
+  border-radius: 6px;
+  background-color: #d9c26c;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
+}
+
+.c__subscribe-box-submit:hover {
+  border-color: #c9b248;
+  background-color: #c9b248;
+  cursor: pointer;
+}
+
 .mail-icon {
   position: absolute;
   width: 20px;
@@ -440,19 +441,20 @@ body {
   transform-origin: bottom;
 }
 
-.mail-icon.c-footer__subscribe-mail-icon {
+.mail-icon.c__subscribe-box-mail-icon {
   top: 50%;
-  left: 30%;
+  left: 16px;
   border-color: #fff;
   background-color: #d9c26c;
   transform: translateY(-50%);
+  pointer-events: none;
 }
 
-.mail-icon.c-footer__subscribe-mail-icon::before {
+.mail-icon.c__subscribe-box-mail-icon::before {
   background-color: #fff;
 }
 
-.mail-icon.c-footer__subscribe-mail-icon::after {
+.mail-icon.c__subscribe-box-mail-icon::after {
   background-color: #fff;
 }
 
@@ -461,37 +463,15 @@ body {
   margin-top: 55px;
 }
 
+.c-button.c__subscribe-box-button {
+  background-color: #d9c26c;
+}
+
+.c-button.c__subscribe-box-button:hover {
+  background-color: #c9b248;
+}
+
 @media only screen and (max-width: 375px) {
-  .c-footer__subscribe {
-    height: 200px;
-  }
-
-  .c-footer__subscribe-wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .c-footer__subscribe-label {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .c-footer__subscribe-input-wrapper {
-    display: block;
-    width: 255px;
-    margin-bottom: 20px;
-  }
-
-  .c-footer__subscribe-submit {
-    display: block;
-  }
-
   .c-footer__main {
     -ms-flex-flow: wrap;
     flex-flow: wrap;
@@ -516,18 +496,11 @@ body {
     text-align: center;
   }
 
-  .mail-icon.c-footer__subscribe-mail-icon {
-    left: 9%;
-    transform: translateY(-140%);
-  }
-}
-
-@media only screen and (min-width: 376px) and (max-width: 768px) {
-  .c-footer__subscribe {
+  .c__subscribe-box {
     height: 200px;
   }
 
-  .c-footer__subscribe-wrapper {
+  .c__subscribe-box-wrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -538,20 +511,29 @@ body {
     align-items: center;
   }
 
-  .c-footer__subscribe-label {
+  .c__subscribe-box-label {
     display: block;
     margin-bottom: 10px;
   }
 
-  .c-footer__subscribe-input-wrapper {
+  .c__subscribe-box-input-wrapper {
     display: block;
+    width: 255px;
     margin-bottom: 20px;
   }
 
-  .c-footer__subscribe-submit {
+  .c__subscribe-box-submit {
     display: block;
   }
+}
 
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .c-footer__main {
+    padding: 50px 60px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
   .c-footer__main {
     -ms-flex-flow: wrap;
     flex-flow: wrap;
@@ -565,15 +547,33 @@ body {
     margin-bottom: 30px;
   }
 
-  .mail-icon.c-footer__subscribe-mail-icon {
-    left: 9%;
-    transform: translateY(-140%);
+  .c__subscribe-box {
+    height: 200px;
   }
-}
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .c-footer__main {
-    padding: 50px 60px;
+  .c__subscribe-box-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .c__subscribe-box-label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .c__subscribe-box-input-wrapper {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .c__subscribe-box-submit {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
