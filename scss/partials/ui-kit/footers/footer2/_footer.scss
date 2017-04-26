@@ -58,16 +58,17 @@
 			margin-top: 30px;
 		}
 		&-social-item {
-			width: 60px;
-			height: 28px;
-			padding-right: 10px;
+			min-width: 60px;
+			padding: 5px;
 
 			border-radius: $smallest-border-radius;
 			outline: none;
 
 			color: $white;
+			font-size: 14px;
 			letter-spacing: $letter-spacing;
-			text-align: right;
+			text-align: center;
+			text-decoration: none;
 			&:not(:last-child) {
 				margin-right: 12px;
 			}
@@ -117,25 +118,6 @@
 					background-color: #3465a5;
 
 					cursor: pointer;
-				}
-			}
-			&-img {
-				width: auto;
-				height: 14px;
-				&.c--facebook {
-					margin-right: 4px;
-					margin-bottom: -1px;
-				}
-				&.c--twitter {
-					margin-right: 8px;
-					margin-bottom: -2px;
-				}
-				&.c--dribbble {
-					margin-right: 8px;
-					margin-bottom: -2px;
-				}
-				&.c--linkedin {
-					margin-right: 6px;
 				}
 			}
 		}
@@ -204,4 +186,8 @@
 			}
 		}
 	}
+}
+
+.social-counter {
+	font-family: $font-stack;
 }

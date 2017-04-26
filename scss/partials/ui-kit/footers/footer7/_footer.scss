@@ -104,11 +104,14 @@
 				margin-bottom: 10px;
 			}
 
-			width: 36px;
-			height: 36px;
+			padding: 9px;
 			border: 1px solid;
 
 			border-radius: $smallest-border-radius;
+
+			color: $white;
+			font-size: 14px;
+			text-decoration: none;
 			&:not(:last-child) {
 				margin-right: 10px;
 			}
@@ -171,12 +174,6 @@
 
 					cursor: pointer;
 				}
-			}
-			&-img {
-				width: auto;
-				height: 14px;
-
-				vertical-align: middle;
 			}
 		}
 	}

@@ -1,3 +1,45 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "svg-icons";
+  src: url("../../../../../fonts/svg-icons.eot");
+  src: url("../../../../../fonts/svg-icons.?#iefix") format("embedded-opentype"), url("../../../../../fonts/svg-icons.woff") format("woff"), url("../../../../../fonts/svg-icons.ttf") format("truetype"), url("../../../../../fonts/svg-icons.#svg-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: "svg-icons";
+}
+
+.icon:before {
+  /* Some common icon stuff */
+}
+
+.icon.icon--dribbble:before {
+  content: "";
+}
+
+.icon.icon--facebook:before {
+  content: "";
+}
+
+.icon.icon--google-plus:before {
+  content: "";
+}
+
+.icon.icon--linkedin:before {
+  content: "";
+}
+
+.icon.icon--twitter:before {
+  content: "";
+}
+
+.icon.icon--vimeo:before {
+  content: "";
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -42,14 +84,15 @@ body {
 }
 
 .c-footer__info-social-item {
-  width: 60px;
-  height: 28px;
-  padding-right: 10px;
+  min-width: 60px;
+  padding: 5px;
   border-radius: 6px;
   outline: none;
   color: #fff;
+  font-size: 14px;
   letter-spacing: 0.02rem;
-  text-align: right;
+  text-align: center;
+  text-decoration: none;
 }
 
 .c-footer__info-social-item:not(:last-child) {
@@ -98,30 +141,6 @@ body {
   border-color: #3465a5;
   background-color: #3465a5;
   cursor: pointer;
-}
-
-.c-footer__info-social-item-img {
-  width: auto;
-  height: 14px;
-}
-
-.c-footer__info-social-item-img.c--facebook {
-  margin-right: 4px;
-  margin-bottom: -1px;
-}
-
-.c-footer__info-social-item-img.c--twitter {
-  margin-right: 8px;
-  margin-bottom: -2px;
-}
-
-.c-footer__info-social-item-img.c--dribbble {
-  margin-right: 8px;
-  margin-bottom: -2px;
-}
-
-.c-footer__info-social-item-img.c--linkedin {
-  margin-right: 6px;
 }
 
 .c-footer__info-links {
@@ -178,6 +197,10 @@ body {
 .c-footer__menu-subitem:first-child {
   color: #383737;
   pointer-events: none;
+}
+
+.social-counter {
+  font-family: "Cabin", Arial, sans-serif;
 }
 
 @media only screen and (max-width: 375px) {

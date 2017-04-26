@@ -83,22 +83,21 @@
 			display: inline-block;
 			width: $small-width;
 			height: $small-height;
+			padding: 10px;
 			border: 1px solid transparent;
 
 			background-color: transparent;
 			outline: none;
 
-			vertical-align: top;
+			color: $black;
+			font-size: 14px;
+			text-decoration: none;
 			&:hover {
 				border-color: $black;
 
 				border-radius: $round-border-radius;
 
 				cursor: pointer;
-			}
-			&-img {
-				width: auto;
-				height: 14px;
 			}
 		}
 	}

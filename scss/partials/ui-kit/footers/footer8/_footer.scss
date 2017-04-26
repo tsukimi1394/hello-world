@@ -69,18 +69,18 @@
 			display: inline-block;
 		}
 		&-item {
-			width: 36px;
-			height: 36px;
+			padding: 9px;
 			border: none;
+			border: 1px solid transparent;
 
 			background-color: transparent;
 			outline: none;
-			&-img {
-				width: auto;
-				height: 14px;
-			}
+
+			color: #9c9b9b;
+			font-size: 14px;
+			text-decoration: none;
 			&:hover {
-				border: 1px solid #9c9b9b;
+				border-color: #9c9b9b;
 
 				border-radius: $round-border-radius;
 			}
