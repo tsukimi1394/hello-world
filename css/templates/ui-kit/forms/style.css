@@ -48,6 +48,33 @@
 
 body {
   font-family: "Cabin", Arial, sans-serif;
+  letter-spacing: 0.02rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 1180px;
+  padding: 96px 120px;
+  margin: 0 auto;
+}
+
+.c-forms {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c-forms:first-child {
+  margin-top: 0;
+}
+
+.c-forms:last-child {
+  margin-bottom: 0;
 }
 
 .buttons {
@@ -905,5 +932,311 @@ body {
   border-right: 5px solid transparent;
   border-bottom: 7px solid #383737;
   border-left: 5px solid transparent;
+}
+
+.c-form {
+  background-color: #f2f5f8;
+  border-radius: 6px;
+}
+
+.c-form--medium-wrapper {
+  width: 49%;
+}
+
+.c-form--small-wrapper {
+  width: 32%;
+}
+
+.c-form--big-wrapper {
+  width: 66%;
+}
+
+.c-form--full-wrapper {
+  width: 100%;
+}
+
+.c-form__header {
+  border-radius: 6px 6px 0 0;
+  text-align: center;
+}
+
+.c-form__header.c-form--sign-up {
+  background: url(../../../../images/ui-kit/forms/back1.jpg) no-repeat;
+}
+
+.c-form__header.c-form--sign-in {
+  background: url(../../../../images/ui-kit/forms/back2.jpg) no-repeat;
+}
+
+.c-form__header.c-form__header--small {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.c-form__header-link {
+  text-align: right;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  padding-top: 20px;
+  padding-right: 18px;
+}
+
+.c-form__header-link:hover {
+  text-decoration: underline;
+}
+
+.c-form__header-link.c-form__header--small {
+  color: #65abd0;
+  padding: 0;
+}
+
+.c-form__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #383737;
+}
+
+.c-form__title.c-form__title--big {
+  color: #fff;
+  font-size: 32px;
+  letter-spacing: 0.05rem;
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+
+.c-form__main {
+  padding: 30px;
+}
+
+.c-form__main-link {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  color: #b4bbc2;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.c-form__main-link:hover {
+  text-decoration: underline;
+}
+
+.c-form .input-wrapper {
+  width: 400px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.c-form .input-wrapper:first-child {
+  margin-top: 0;
+}
+
+.c-form .input-wrapper.c-form__main--small {
+  width: 240px;
+}
+
+.c-form__input {
+  width: 100%;
+  padding: 12px;
+  padding-left: 45px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 2px solid #c6ccd2;
+  outline: none;
+}
+
+.c-form__input:focus {
+  border-color: #65abd0;
+}
+
+.c-form__input::-webkit-input-placeholder {
+  color: #c6ccd2;
+}
+
+.c-form__input:-ms-input-placeholder {
+  color: #c6ccd2;
+}
+
+.c-form__input::placeholder {
+  color: #c6ccd2;
+}
+
+.c-form__footer {
+  border-top: 2px solid #dee2e7;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c-form__footer-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #c6ccd2;
+  font-size: 14px;
+  background-color: #f2f5f8;
+  padding: 10px;
+}
+
+.c-form__social-link {
+  width: 49%;
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.c-form__social-link.c--facebook {
+  background-color: #3162a2;
+}
+
+.c-form__social-link.c--facebook::before {
+  margin-right: 7px;
+  font-size: 14px;
+}
+
+.c-form__social-link.c--facebook:hover {
+  background-color: #235493;
+}
+
+.c-form__social-link.c--twitter {
+  background-color: #65abd0;
+}
+
+.c-form__social-link.c--twitter::before {
+  margin-right: 7px;
+  font-size: 14px;
+}
+
+.c-form__social-link.c--twitter:hover {
+  background-color: #5093b7;
+}
+
+.mail-icon {
+  background-color: #c6ccd2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 13px;
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid #fff;
+  pointer-events: none;
+}
+
+.mail-icon:before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: -5px;
+  width: 1px;
+  height: 12px;
+  background-color: #fff;
+  transform-origin: bottom;
+  transform: rotate(-54deg);
+}
+
+.mail-icon:after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: -5px;
+  width: 1px;
+  height: 12px;
+  background-color: #fff;
+  transform-origin: bottom;
+  transform: rotate(54deg);
+}
+
+.lock-icon {
+  background-color: #c6ccd2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  width: 14px;
+  height: 11px;
+  border-radius: 2px;
+  border: 2px solid #c6ccd2;
+  pointer-events: none;
+}
+
+.lock-icon:before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: -8px;
+  width: 4px;
+  height: 6px;
+  border-radius: 4px 4px 0 0;
+  border-top: 2px solid #c6ccd2;
+  border-left: 2px solid #c6ccd2;
+  border-right: 2px solid #c6ccd2;
+}
+
+.button-wrapper.c-form--sign-up {
+  display: block;
+}
+
+.button-wrapper.c-form--sign-in {
+  display: block;
+}
+
+.c-button.c-form--sign-up {
+  font-size: 18px;
+}
+
+.c-button.c-form--sign-in {
+  font-size: 18px;
+  background-color: #24aa98;
+}
+
+.c-button.c-form--sign-in:hover {
+  background-color: #1a9385;
+}
+
+.c-check.c-form__checkbox {
+  z-index: 100;
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+.c-check.c-form__checkbox label {
+  vertical-align: middle;
+  padding-left: 5px;
+  color: #b4bbc2;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.c-check.c-form__checkbox [type='checkbox'] + label::before {
+  top: -12px;
+  left: 0;
+  height: 96%;
+}
+
+.c-check.c-form__checkbox [type='checkbox']:checked + label::before {
+  top: 4px;
 }
 /*# sourceMappingURL=style.css.map */

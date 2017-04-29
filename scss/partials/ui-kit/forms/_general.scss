@@ -1,9 +1,30 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    font-family: $font-stack;
+	font-family: $font-stack;
+	letter-spacing: $letter-spacing;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	max-width: 1180px;
+	padding: 96px 120px;
+	margin: 0 auto;
 }
+
+.c-forms {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	display: flex;
+	justify-content: space-between;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
