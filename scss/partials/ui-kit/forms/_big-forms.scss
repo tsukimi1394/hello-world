@@ -6,6 +6,9 @@
 	}
 	&--small-wrapper {
 		width: 32%;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
 	}
 	&--big-wrapper {
 		width: 66%;
@@ -15,7 +18,7 @@
 	}
 	&__header {
 		border-radius: $smallest-border-radius $smallest-border-radius 0 0;
-		text-align: center;
+		margin-bottom: 20px;
 		&.c-form--sign-up {
 			background: url(../../../../images/ui-kit/forms/back1.jpg) no-repeat;
 		}
@@ -28,6 +31,10 @@
 			justify-content: space-between;
 			padding: 20px;
 			padding-bottom: 0;
+		}
+		&.c-form--payment {
+			display: flex;
+			justify-content: space-between;
 		}
 		&-link {
 			text-align: right;
@@ -56,10 +63,15 @@
 			letter-spacing: 0.05rem;
 			padding-top: 24px;
 			padding-bottom: 40px;
+			text-align: center;
+		}
+		&.c-form--payment {
+			width: 50%;
 		}
 	}
 	&__main {
 		padding: 30px;
+		padding-top: 10px;
 		&-link {
 			text-decoration: none;
 			display: block;
@@ -70,6 +82,35 @@
 			&:hover {
 				text-decoration: underline;
 			}
+		}
+		&.c-form--subscribe {
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+		}
+		&.c-form--big-contact {
+			padding-bottom: 0;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		&.c-form--small-contact {
+			padding: 0;
+		}
+		&.c-form--payment {
+			display: flex;
+			justify-content: space-between;
+			padding: 10px 15px 5px 10px;
+		}
+		&.c-form--address {
+			display: flex;
+			justify-content: space-between;
+			flex-flow: wrap;
+			padding: 10px 15px 5px 10px;
+		}
+		&-inputs-wrapper {
+			display: flex;
+			justify-content: space-between;
+			flex-flow: wrap;
 		}
 	}
 	.input-wrapper {
@@ -83,31 +124,151 @@
 		&.c-form__main--small {
 			width: 240px;
 		}
+		&.c-form--subscribe {
+			width: 199px;
+		}
+		&.c-form--big-contact {
+			width: 260px;
+			&.c-form--select {
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					right: 12%;
+					width: 7px;
+					height: 7px;
+					border-top: solid $border-width $white;
+					border-right: solid $border-width $white;
+					transform: translateY(-50%) rotate(135deg);
+					cursor: pointer;
+				}
+			}
+		}
+		&.c-form--small-contact {
+			width: 260px;
+			margin-top: 10px;
+			margin-bottom: 24px;
+		}
+		&.c-form--payment {
+			width: 324px;
+		}
+		&.c-form--small-select {
+			width: 152px;
+			position: relative;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 12%;
+				width: 7px;
+				height: 7px;
+				border-top: solid $border-width $white;
+				border-right: solid $border-width $white;
+				transform: translateY(-50%) rotate(135deg);
+				cursor: pointer;
+			}
+		}
+		&.number {
+			width: 74px;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+		&.c-form--address {
+			width: 273px;
+			&.c-form--select {
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					right: 12%;
+					width: 7px;
+					height: 7px;
+					border-top: solid $border-width $white;
+					border-right: solid $border-width $white;
+					transform: translateY(-50%) rotate(135deg);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.input-label-wrapper {
+		label {
+			display: block;
+			font-size: $medium-font;
+			color: $dark-grey;
+			text-transform: capitalize;
+			flex-basis: 100%;
+		}
+		&.group {
+			display: flex;
+			justify-content: flex-start;
+			flex-flow: wrap;
+		}
 	}
 	&__input {
 		width: 100%;
-		padding: 12px;
-		padding-left: 45px;
+		padding: 14px;
+		&.c-form__input--icon {
+			padding-left: 45px;
+		}
 		font-size: $medium-font;
 		border-radius: $smallest-border-radius;
 		border: 2px solid $grey;
 		outline: none;
+		color: $black;
+		font-weight: 600;
+		font-family: $font-stack;
 		&:focus {
+			& + .mail-icon {
+				background-color: $black;
+			}
+			& + .lock-icon {
+				background-color: $black;
+				border-color: $black;
+			}
+			& + .lock-icon::before {
+				border-color: $black;
+			}
 			border-color: $blue;
+		}
+		&:valid {
+			~ .mail-icon {
+				background-color: $black;
+			}
+			~ .lock-icon {
+				background-color: $black;
+				border-color: $black;
+			}
+			~ .lock-icon::before {
+				border-color: $black;
+			}
 		}
 		&::placeholder {
 			color: $grey;
+			font-weight: normal;
 		}
 	}
 	&__footer {
-		border-top: 2px solid $light-grey;
-		margin-left: 30px;
-		margin-right: 30px;
-		padding-top: 30px;
-		padding-bottom: 30px;
-		position: relative;
+		&.c-form-social {
+			border-top: 2px solid $light-grey;
+			margin-left: 30px;
+			margin-right: 30px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			position: relative;
+		}
 		display: flex;
 		justify-content: space-between;
+		align-items: baseline;
+		&.right-position {
+			justify-content: flex-end;
+		}
 		&-text {
 			position: absolute;
 			top: 0;
@@ -118,6 +279,38 @@
 			font-size: $small-font;
 			background-color: #f2f5f8;
 			padding: 10px;
+		}
+		&-link {
+			text-decoration: none;
+			color: $blue;
+			font-size: $medium-font;
+			position: relative;
+			margin-left: 20px;
+			display: block;
+			&:hover {
+				text-decoration: underline;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				margin-left: -20px;
+				width: 6px;
+				height: 6px;
+				border-top: solid $border-width $blue;
+				border-right: solid $border-width $blue;
+				transform: translateY(-50%) rotate(-135deg);
+				cursor: pointer;
+			}
+		}
+		&.c-form--payment {
+			padding: 20px 15px 10px 10px;
+		}
+		&.c-form--address {
+			padding: 20px 15px 10px 10px;
+		}
+		&.c-form--cart {
+			padding: 20px 15px 10px 10px;
 		}
 	}
 	&__social-link {
@@ -149,6 +342,128 @@
 				background-color: $dark-blue;
 			}
 		}
+	}
+	&.c-form--subscribe {
+		padding: 20px;
+	}
+	&__text {
+		padding-left: 4px;
+		padding-right: 4px;
+		margin-bottom: 10px;
+		display: block;
+		color: $dark-grey;
+		font-size: $small-font;
+		line-height: 1.28;
+	}
+	&.c-form--big-contact {
+		padding: 20px;
+	}
+	&.c-form--small-contact {
+		padding: 20px;
+	}
+	&.c-form--cart {
+		padding: 20px;
+	}
+	&.c-form--address {
+		padding: 20px;
+	}
+	&.c-form--payment {
+		padding: 20px;
+	}
+	&__select {
+		font-size: $medium-font;
+		color: $white;
+		&.c-form--big-contact {
+			background-color: $blue;
+			border: 1px solid $blue;
+			&:hover {
+				background-color: $dark-blue;
+				border-color: $dark-blue;
+			}
+		}
+		&.c-form--payment {
+			background-color: $orange;
+			border: 1px solid $orange;
+			&:hover {
+				background-color: $dark-orange;
+				border-color: $dark-orange;
+			}
+		}
+		&.c-form--address {
+			background-color: $orange;
+			border: 2px solid $orange;
+			&:hover {
+				background-color: $dark-orange;
+				border-color: $dark-orange;
+			}
+		}
+		padding: 13px;
+		width: 100%;
+		border-radius: $smallest-border-radius;
+		outline: none;
+		font-weight: 600;
+		font-family: $font-stack;
+		letter-spacing: $letter-spacing;
+		appearance: none;
+		cursor: pointer;
+	}
+	&__message {
+		border-radius: $smallest-border-radius;
+		border: 2px solid $grey;
+		font-family: $font-stack;
+		line-height: 1.375;
+		font-size: $medium-font;
+		font-weight: 600;
+		margin-top: 12px;
+		margin-bottom: 16px;
+		padding: 15px;
+		outline: none;
+		&.c-form--big-contact {
+			width: 560px;
+			height: 144px;
+		}
+		&.c-form--small-contact {
+			width: 260px;
+			height: 144px;
+		}
+		&:focus {
+			border-color: $blue;
+		}
+	}
+	&__billing-address {
+		margin-left: 10px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		&-text {
+			line-height: 1.375;
+			color: $dark-grey;
+			font-size: $medium-font;
+		}
+	}
+}
+
+.c-form--payment-sum {
+	display: block;
+	text-align: right;
+	color: $black;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.c-form--subtotal {
+	margin-top: 20px;
+	text-align: right;
+	margin-right: 30px;
+	font-weight: 600;
+	&-text {
+		color: $dark-grey;
+		font-size: $small-font;
+		margin-right: 15px;
+	}
+	&-quantity {
+		color: $black;
+		font-size: $medium-font;
 	}
 }
 
@@ -215,9 +530,24 @@
 .button-wrapper {
 	&.c-form--sign-up {
 		display: block;
+		margin: 0;
 	}
 	&.c-form--sign-in {
 		display: block;
+		margin: 0;
+	}
+	&.c-form--reset {
+		display: block;
+		margin: 0;
+	}
+	&.c-form--subscribe {
+		min-width: 0;
+		width: $normal-width;
+		height: $normal-height;
+		margin: 0;
+	}
+	&.c-form--ok {
+		margin: 0;
 	}
 }
 
@@ -230,6 +560,112 @@
 		background-color: $green;
 		&:hover {
 			background-color: $dark-green;
+		}
+	}
+	&.c-form--reset {
+		font-size: $large-font;
+		background-color: $red;
+		&:hover {
+			background-color: $dark-red;
+		}
+	}
+	&.c-form--subscribe {
+		background-color: $orange;
+		height: 100%;
+		position: relative;
+		&:hover {
+			background-color: $dark-orange;
+		}
+		&.c--button-circle {
+			&::before {
+				left: 45%;
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+		}
+	}
+	&.c-form--ok {
+		padding: 15px 20px;
+		background-color: $green;
+		&:hover {
+			background-color: $dark-green;
+		}
+		.c-form--arrow-btn {
+			margin-right: 10px;
+			position: relative;
+			text-transform: capitalize;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				margin-left: 10px;
+				width: 6px;
+				height: 6px;
+				border-top: solid $border-width $white;
+				border-right: solid $border-width $white;
+				transform: translateY(-50%) rotate(45deg);
+				cursor: pointer;
+			}
+		}
+	}
+	&--minus {
+		width: 26px;
+		height: 26px;
+		border-radius: $smallest-border-radius;
+		background-color: $red;
+		position: relative;
+		cursor: pointer;
+		outline: none;
+		border: 1px solid $red;
+		&:hover {
+			background-color: $dark-red;
+			border-color: $dark-red;
+		}
+		&::after {
+			content: "";
+			width: 10px;
+			height: 2px;
+			background-color: $white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			pointer-events: none;
+		}
+	}
+	&--plus {
+		width: 26px;
+		height: 26px;
+		border-radius: $smallest-border-radius;
+		background-color: $green;
+		position: relative;
+		cursor: pointer;
+		outline: none;
+		border: 1px solid $green;
+		&:hover {
+			background-color: $dark-green;
+			border-color: $dark-green;
+		}
+		&::after {
+			content: "";
+			width: 10px;
+			height: 2px;
+			background-color: $white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			pointer-events: none;
+		}
+		&::before {
+			content: "";
+			height: 10px;
+			width: 2px;
+			background-color: $white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			pointer-events: none;
 		}
 	}
 }
@@ -249,10 +685,192 @@
 		[type='checkbox'] + label::before {
 			top: -12px;
 			left: 0;
-			height: 96%;
 		}
 		[type='checkbox']:checked + label::before {
 			top: 4px;
 		}
+		.c-form--payment {
+			font-weight: 600;
+			color: $black;
+		}
+	}
+}
+
+.c-table {
+	&.c-form--cart {
+		th {
+			&:not(:first-child) {
+				text-align: center;
+			}
+			&:first-child {
+				padding-left: 110px;
+			}
+		}
+		td {
+			padding: 10px;
+			text-transform: capitalize;
+			&:not(:first-child) {
+				text-align: center;
+			}
+			&:first-child {
+				color: $black;
+			}
+		}
+	}
+}
+
+.c-item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	&__content {
+		margin-left: 20px;
+	}
+	&__color {
+		color: $grey;
+		margin-right: 20px;
+		span {
+			margin-right: 10px;
+			font-weight: normal;
+		}
+		position: relative;
+		[type='radio'] {
+			opacity: 0;
+			margin-right: 13px;
+		}
+		[type='radio'] + label {
+			cursor: pointer;
+		}
+		#belt-color1 + label::before {
+			content: '';
+			position: absolute;
+			top: -16px;
+			left: 53px;
+			width: 16px;
+			height: 32px;
+			background: url(../../../../images/ui-kit/forms/belt-color1.png) no-repeat;
+			background-position: 0 16px;
+			cursor: pointer;
+		}
+		#belt-color1:checked + label::before {
+			top: 0;
+			background-position: 0 -16px;
+		}
+		#belt-color2 + label::before {
+			content: '';
+			position: absolute;
+			top: -16px;
+			left: 83px;
+			width: 16px;
+			height: 32px;
+			background: url(../../../../images/ui-kit/forms/belt-color2.png) no-repeat;
+			background-position: 0 16px;
+			cursor: pointer;
+		}
+		#belt-color2:checked + label::before {
+			top: 0;
+			background-position: 0 -16px;
+		}
+		#belt-color3 + label::before {
+			content: '';
+			position: absolute;
+			top: -16px;
+			left: 113px;
+			width: 16px;
+			height: 32px;
+			background: url(../../../../images/ui-kit/forms/belt-color3.png) no-repeat;
+			background-position: 0 16px;
+			cursor: pointer;
+		}
+		#belt-color3:checked + label::before {
+			top: 0;
+			background-position: 0 -16px;
+		}
+		#belt-color4 + label::before {
+			content: '';
+			position: absolute;
+			top: -16px;
+			left: 143px;
+			width: 16px;
+			height: 32px;
+			background: url(../../../../images/ui-kit/forms/belt-color4.png) no-repeat;
+			background-position: 0 16px;
+			cursor: pointer;
+		}
+		#belt-color4:checked + label::before {
+			top: 0;
+			background-position: 0 -16px;
+		}
+		#belt-color5 + label::before {
+			content: '';
+			position: absolute;
+			top: -16px;
+			left: 173px;
+			width: 16px;
+			height: 32px;
+			background: url(../../../../images/ui-kit/forms/belt-color5.png) no-repeat;
+			background-position: 0 16px;
+			cursor: pointer;
+		}
+		#belt-color5:checked + label::before {
+			top: 0;
+			background-position: 0 -16px;
+		}
+		#shoes-color1 + label::before {
+			content: '';
+			position: absolute;
+			top: -16px;
+			left: 53px;
+			width: 16px;
+			height: 32px;
+			background: url(../../../../images/ui-kit/forms/shoes-color1.png) no-repeat;
+			background-position: 0 16px;
+			cursor: pointer;
+		}
+		#shoes-color1:checked + label::before {
+			top: 0;
+			background-position: 0 -16px;
+		}
+		#shoes-color2 + label::before {
+			content: '';
+			position: absolute;
+			top: -16px;
+			left: 83px;
+			width: 16px;
+			height: 32px;
+			background: url(../../../../images/ui-kit/forms/shoes-color2.png) no-repeat;
+			background-position: 0 16px;
+			cursor: pointer;
+		}
+		#shoes-color2:checked + label::before {
+			top: 0;
+			background-position: 0 -16px;
+		}
+	}
+	&__size {
+		color: $grey;
+		span {
+			font-weight: normal;
+		}
+		&-number {
+			margin-left: 10px;
+			font-size: 12px;
+			line-height: 1.67;
+			color: $white;
+			background-color: $grey;
+			border-radius: $smallest-border-radius;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+	&__info {
+		margin-top: 10px;
+		display: flex;
+		justify-content: flex-start;
+	}
+	&__quantity {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
 	}
 }
