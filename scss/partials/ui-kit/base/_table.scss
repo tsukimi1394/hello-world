@@ -58,11 +58,11 @@
 	}
 }
 
-.table-music-wrapper {
+.table-wrapper {
 	width: 700px;
 }
 
-.c-table__music {
+.c-table {
 	border-collapse: collapse;
 	width: 100%;
 
@@ -73,16 +73,12 @@
 	th {
 		padding: 15px;
 
-		border-radius: $smallest-border-radius;
-
 		color: $dark-grey;
 		font-size: $small-font;
 	}
 	td {
 		padding: 15px;
 		border-top: 2px solid $light-grey;
-
-		border-radius: $smallest-border-radius;
 
 		font-size: $medium-font;
 		&:first-child {

@@ -1029,7 +1029,7 @@ body {
   left: 16px;
   z-index: -1;
   width: 100%;
-  height: 70%;
+  height: 32px;
   background: url(../../../../images/ui-kit/base/checkbox.png) no-repeat;
   background-position: 0 16px;
   cursor: pointer;
@@ -1634,11 +1634,11 @@ body {
   border-bottom: 2px solid #dee2e7;
 }
 
-.table-music-wrapper {
+.table-wrapper {
   width: 700px;
 }
 
-.c-table__music {
+.c-table {
   border-collapse: collapse;
   width: 100%;
   color: #383737;
@@ -1647,33 +1647,31 @@ body {
   text-align: left;
 }
 
-.c-table__music th {
+.c-table th {
   padding: 15px;
-  border-radius: 6px;
   color: #b4bbc2;
   font-size: 14px;
 }
 
-.c-table__music td {
+.c-table td {
   padding: 15px;
   border-top: 2px solid #dee2e7;
-  border-radius: 6px;
   font-size: 16px;
 }
 
-.c-table__music td:first-child {
+.c-table td:first-child {
   color: #b4bbc2;
 }
 
-.c-table__music form {
+.c-table form {
   position: relative;
 }
 
-.c-table__music [type='checkbox'] {
+.c-table [type='checkbox'] {
   opacity: 0;
 }
 
-.c-table__music [type='checkbox'] + label {
+.c-table [type='checkbox'] + label {
   position: absolute;
   top: 3px;
   left: 0;
@@ -1684,12 +1682,12 @@ body {
   cursor: pointer;
 }
 
-.c-table__music [type='checkbox']:checked + label {
+.c-table [type='checkbox']:checked + label {
   z-index: -1;
   background-position: 0 -16px;
 }
 
-.c-table__music .active {
+.c-table .active {
   color: #24aa98;
 }
 

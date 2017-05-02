@@ -15,18 +15,18 @@
           </div>
           <form class="c-form__main">
             <div class="input-wrapper">
-              <input class="c-form__input" type="email" placeholder="E-mail or login">
+              <input class="c-form__input c-form__input--icon" type="email" placeholder="E-mail or login" required>
               <div class="mail-icon"></div>
             </div>
             <div class="input-wrapper">
-              <input class="c-form__input" type="password" placeholder="Password">
+              <input class="c-form__input c-form__input--icon" type="password" placeholder="Password" required>
               <div class="lock-icon"></div>
             </div><a class="c-form__main-link" href="#">Forgot password?</a>
             <div class="button-wrapper c-form--sign-up">
               <button class="c-button c--button-rounded c-form--sign-up">Sign up</button>
             </div>
           </form>
-          <div class="c-form__footer"><span class="c-form__footer-text">Or</span><a class="c-form__social-link c--facebook" href="#">Login via Facebook</a><a class="c-form__social-link c--twitter" href="#">Login via Twitter</a></div>
+          <div class="c-form__footer c-form-social"><span class="c-form__footer-text">Or</span><a class="c-form__social-link c--facebook" href="#">Login via Facebook</a><a class="c-form__social-link c--twitter" href="#">Login via Twitter</a></div>
         </div>
       </div>
       <div class="c-form--medium-wrapper">
@@ -36,11 +36,11 @@
           </div>
           <form class="c-form__main">
             <div class="input-wrapper">
-              <input class="c-form__input" type="email" placeholder="E-mail or login">
+              <input class="c-form__input c-form__input--icon" type="email" placeholder="E-mail or login" required>
               <div class="mail-icon"></div>
             </div>
             <div class="input-wrapper">
-              <input class="c-form__input" type="password" placeholder="Password">
+              <input class="c-form__input c-form__input--icon" type="password" placeholder="Password" required>
               <div class="lock-icon"></div>
             </div>
             <div class="c-check c-form__checkbox">
@@ -51,7 +51,7 @@
               <button class="c-button c--button-rounded c-form--sign-in">Sign in</button>
             </div>
           </form>
-          <div class="c-form__footer"><span class="c-form__footer-text">Or</span><a class="c-form__social-link c--facebook" href="#">Login via Facebook</a><a class="c-form__social-link c--twitter" href="#">Login via Twitter</a></div>
+          <div class="c-form__footer c-form-social"><span class="c-form__footer-text">Or</span><a class="c-form__social-link c--facebook" href="#">Login via Facebook</a><a class="c-form__social-link c--twitter" href="#">Login via Twitter</a></div>
         </div>
       </div>
     </section>
@@ -61,20 +61,20 @@
           <div class="c-form__header c-form__header--small"><a class="c-form__header-link c-form__header--small" href="#">Already registered?</a>
             <h2 class="c-form__title">Sign up</h2>
           </div>
-          <div class="c-form__main">
+          <form class="c-form__main">
             <div class="input-wrapper c-form__main--small">
-              <input class="c-form__input c-form__main--small" type="email" placeholder="E-mail or login">
+              <input class="c-form__input c-form__main--small c-form__input--icon" type="email" placeholder="E-mail or login" required>
               <div class="mail-icon"></div>
             </div>
             <div class="input-wrapper c-form__main--small">
-              <input class="c-form__input c-form__main--small" type="password" placeholder="Password">
+              <input class="c-form__input c-form__main--small c-form__input--icon" type="password" placeholder="Password" required>
               <div class="lock-icon"></div>
             </div><a class="c-form__main-link" href="#">Forgot password?</a>
             <div class="button-wrapper c-form--sign-up">
               <button class="c-button c--button-rounded c-form--sign-up">Sign up</button>
             </div>
-          </div>
-          <div class="c-form__footer"><span class="c-form__footer-text">Or</span><a class="c-form__social-link c--facebook icon icon--facebook" href="#">Facebook</a><a class="c-form__social-link c--twitter icon icon--twitter" href="#">Twitter</a></div>
+          </form>
+          <div class="c-form__footer c-form-social"><span class="c-form__footer-text">Or</span><a class="c-form__social-link c--facebook icon icon--facebook" href="#">Facebook</a><a class="c-form__social-link c--twitter icon icon--twitter" href="#">Twitter</a></div>
         </div>
       </div>
       <div class="c-form--small-wrapper">
@@ -82,13 +82,13 @@
           <div class="c-form__header c-form__header--small"><a class="c-form__header-link c-form__header--small" href="#">Create an account</a>
             <h2 class="c-form__title">Sign in</h2>
           </div>
-          <div class="c-form__main">
+          <form class="c-form__main">
             <div class="input-wrapper c-form__main--small">
-              <input class="c-form__input c-form__main--small" type="email" placeholder="E-mail or login">
+              <input class="c-form__input c-form__main--small c-form__input--icon" type="email" placeholder="E-mail or login" value="hello@creativeda.sh" required>
               <div class="mail-icon"></div>
             </div>
             <div class="input-wrapper c-form__main--small">
-              <input class="c-form__input c-form__main--small" type="password" placeholder="Password">
+              <input class="c-form__input c-form__main--small c-form__input--icon" type="password" placeholder="Password" value="123456" required>
               <div class="lock-icon"></div>
             </div>
             <div class="c-check c-form__checkbox">
@@ -98,36 +98,38 @@
             <div class="button-wrapper c-form--sign-in">
               <button class="c-button c--button-rounded c-form--sign-in">Sign in</button>
             </div>
-          </div>
-          <div class="c-form__footer"><span class="c-form__footer-text">Or</span><a class="c-form__social-link c--facebook icon icon--facebook" href="#">Facebook</a><a class="c-form__social-link c--twitter icon icon--twitter" href="#">Twitter</a></div>
+          </form>
+          <div class="c-form__footer c-form-social"><span class="c-form__footer-text">Or</span><a class="c-form__social-link c--facebook icon icon--facebook" href="#">Facebook</a><a class="c-form__social-link c--twitter icon icon--twitter" href="#">Twitter</a></div>
         </div>
       </div>
       <div class="c-form--small-wrapper">
         <div class="c-form c-form--reset">
-          <div class="c-form__header">
-            <h2 class="c-form__title">Reset password</h2><a href="#">Sign in</a>
+          <div class="c-form__header c-form__header--small"><a class="c-form__header-link c-form__header--small" href="#">Sign in</a>
+            <h2 class="c-form__title">Reset password</h2>
           </div>
-          <div class="c-form__main">
-            <div>
-              <input type="email" placeholder="E-mail or login">
+          <form class="c-form__main">
+            <div class="input-wrapper c-form__main--small">
+              <input class="c-form__input c-form__main--small c-form__input--icon" type="email" placeholder="E-mail or login" required>
               <div class="mail-icon"></div>
             </div>
-            <div class="button-wrapper">
-              <button>Sign up</button>
+            <div class="button-wrapper c-form--reset">
+              <button class="c-button c--button-rounded c-form--reset">Reset</button>
             </div>
-          </div>
+          </form>
         </div>
         <div class="c-form c-form--subscribe">
-          <h2 class="c-form__title">Subscribing</h2><span>We will never send you spam or some other trash</span>
-          <div>
-            <div>
-              <input type="email" placeholder="E-mail">
+          <div class="c-form__header">
+            <h2 class="c-form__title">Subscribing</h2>
+          </div><span class="c-form__text">We will never send you spam or some other trash</span>
+          <form class="c-form__main c-form--subscribe">
+            <div class="input-wrapper c-form__main--small c-form--subscribe">
+              <input class="c-form__input c-form__main--small c-form__input--icon" type="email" placeholder="E-mail" required>
               <div class="mail-icon"></div>
             </div>
-            <div class="button-wrapper">
-              <button>пр</button>
+            <div class="button-wrapper c-form--subscribe">
+              <button class="c-button c--button-rounded c--button-circle c-form--subscribe"></button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>
@@ -137,41 +139,53 @@
           <div class="c-form__header">
             <h2 class="c-form__title">Contact</h2>
           </div>
-          <div class="c-form__main">
-            <div>
-              <label for="name--big-contact">Name</label>
-              <input type="text" placeholder="Carlos Shorter" name="name--big-contact" id="name--big-contact">
+          <form class="c-form__main c-form--big-contact">
+            <div class="c-form__main-inputs-wrapper">
+              <div class="input-label-wrapper">
+                <label for="name--big-contact">Name</label>
+                <div class="input-wrapper c-form--big-contact">
+                  <input class="c-form__input c-form--big-contact" type="text" value="Carlos Shorter" name="name--big-contact" id="name--big-contact">
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="email--big-contact">E-mail</label>
+                <div class="input-wrapper c-form--big-contact">
+                  <input class="c-form__input c-form--big-contact" type="email" value="shotercarlos@gmail.com" name="email--big-contact" id="email--big-contact">
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="subject--big-contact">Subject</label>
+                <div class="input-wrapper c-form--big-contact">
+                  <input class="c-form__input c-form--big-contact" type="text" value="Partnership" name="subject--big-contact" id="subject--big-contact">
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="budget--big-contact">Select budget</label>
+                <div class="input-wrapper c-form--big-contact c-form--select">
+                  <select class="c-form__select c-form--big-contact" name="budget--big-contact" id="budget--big-contact">
+                    <option>less than $5.000</option>
+                    <option>$5.000 - $10.000</option>
+                    <option selected>$10.000 - $15.000</option>
+                    <option>$15.000 - $20.000</option>
+                    <option>more than $20.000</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="message--big-contact">Message</label>
+                <textarea class="c-form__message c-form--big-contact" name="message--big-contact" id="message--big-contact">Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.</textarea>
+              </div>
             </div>
-            <div>
-              <label for="email--big-contact">E-mail</label>
-              <input type="email" placeholder="shotercarlos@gmail.com" name="email--big-contact" id="email--big-contact">
+            <div class="c-form__footer">
+              <div class="c-check c-form__checkbox">
+                <input name="check-btn" type="checkbox" value="on" id="check-btn--on" checked>
+                <label for="check-btn--on">Send me a copy</label>
+              </div>
+              <div class="button-wrapper c-form--ok">
+                <button class="c-button c--button-rounded c-form--ok">Send</button>
+              </div>
             </div>
-            <div>
-              <label for="subject--big-contact">Subject</label>
-              <input type="text" placeholder="Partnership" name="subject--big-contact" id="subject--big-contact">
-            </div>
-            <div>
-              <label for="budget--big-contact">Select budget</label>
-              <select name="budget--big-contact" id="budget--big-contact">
-                <option>less than $5.000</option>
-                <option>$5.000 - $10.000</option>
-                <option selected>$10.000 - $15.000</option>
-                <option>$15.000 - $20.000</option>
-                <option>more than $20.000</option>
-              </select>
-            </div>
-            <div>
-              <label for="message--big-contact">Message</label>
-              <textarea name="message--big-contact" id="message--big-contact"></textarea>
-            </div>
-            <div class="c-check">
-              <input name="check-btn" type="checkbox" value="on" id="check-btn--on" checked>
-              <label for="check-btn--on">Send me a copy</label>
-            </div>
-            <div class="button-wrapper">
-              <button>Send</button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
       <div class="c-form--small-wrapper">
@@ -179,21 +193,29 @@
           <div class="c-form__header">
             <h2 class="c-form__title">Contact</h2>
           </div>
-          <div class="c-form__main">
-            <div>
-              <label for="name--big-contact">Name</label>
-              <input type="text" placeholder="Carlos Shorter" name="name--big-contact" id="name--big-contact">
+          <div class="c-form__main c-form--small-contact">
+            <div class="c-form__main-inputs-wrapper">
+              <div class="input-label-wrapper">
+                <label for="name--small-contact">Name</label>
+                <div class="input-wrapper c-form--small-contact">
+                  <input class="c-form__input c-form--small-contact" type="text" value="Carlos Shorter" name="name--small-contact" id="name--small-contact">
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="email--small-contact">E-mail</label>
+                <div class="input-wrapper c-form--small-contact">
+                  <input class="c-form__input c-form--small-contact" type="email" value="shotercarlos@gmail.com" name="email--small-contact" id="email--small-contact">
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="message--small-contact">Message</label>
+                <textarea class="c-form__message c-form--small-contact" name="message--small-contact" id="message--small-contact">Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.</textarea>
+              </div>
             </div>
-            <div>
-              <label for="email--big-contact">E-mail</label>
-              <input type="email" placeholder="shotercarlos@gmail.com" name="email--big-contact" id="email--big-contact">
-            </div>
-            <div>
-              <label for="message--big-contact">Message</label>
-              <textarea name="message--big-contact" id="message--big-contact"></textarea>
-            </div>
-            <div class="button-wrapper">
-              <button>Send</button>
+            <div class="c-form__footer right-position">
+              <div class="button-wrapper c-form--ok">
+                <button class="c-button c--button-rounded c-form--ok">Send</button>
+              </div>
             </div>
           </div>
         </div>
@@ -206,7 +228,7 @@
             <h2 class="c-form__title">Cart</h2>
           </div>
           <div class="c-form__main">
-            <table>
+            <table class="c-table c-form--cart">
               <tr>
                 <th>Item</th>
                 <th>Price</th>
@@ -215,69 +237,83 @@
               </tr>
               <tr>
                 <td>
-                  <div><img alt="leather bag"></div>
-                  <div><span>Leather bag</span></div>
+                  <div class="c-item">
+                    <div class="c-item__photo"><img src="../../../images/ui-kit/forms/item1.jpg" alt="leather bag"></div>
+                    <div class="c-item__content"><span>Leather bag</span></div>
+                  </div>
                 </td>
                 <td>$199</td>
-                <td> 
-                  <div></div><span>1</span>
-                  <div></div>
+                <td>
+                  <div class="c-item__quantity"> 
+                    <button class="c-button--minus"></button><span>1</span>
+                    <button class="c-button--plus"></button>
+                  </div>
                 </td>
                 <td>$199</td>
               </tr>
               <tr>
                 <td>
-                  <div><img alt="leather belt"></div>
-                  <div><span>Leather belt</span>
-                    <div><span>Color: </span>
-                      <input type="radio" name="color-belt" id="belt-color1" checked>
-                      <label for="color1"></label>
-                      <input type="radio" name="color-belt" id="belt-color2">
-                      <label for="color2"></label>
-                      <input type="radio" name="color-belt" id="belt-color3">
-                      <label for="color3"></label>
-                      <input type="radio" name="color-belt" id="belt-color4">
-                      <label for="color4"></label>
-                      <input type="radio" name="color-belt" id="belt-color5">
-                      <label for="color5"></label>
+                  <div class="c-item">
+                    <div class="c-item__photo"><img src="../../../images/ui-kit/forms/item2.jpg" alt="leather belt"></div>
+                    <div class="c-item__content"><span>Leather belt</span>
+                      <div class="c-item__info">
+                        <div class="c-item__color"><span>Color: </span>
+                          <input type="radio" name="color-belt" id="belt-color1" checked>
+                          <label for="belt-color1"></label>
+                          <input type="radio" name="color-belt" id="belt-color2">
+                          <label for="belt-color2"></label>
+                          <input type="radio" name="color-belt" id="belt-color3">
+                          <label for="belt-color3"></label>
+                          <input type="radio" name="color-belt" id="belt-color4">
+                          <label for="belt-color4"></label>
+                          <input type="radio" name="color-belt" id="belt-color5">
+                          <label for="belt-color5"></label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </td>
                 <td>$49</td>
                 <td> 
-                  <div></div><span>2</span>
-                  <div></div>
+                  <div class="c-item__quantity">
+                    <button class="c-button--minus"></button><span>2</span>
+                    <button class="c-button--plus"></button>
+                  </div>
                 </td>
                 <td>$98</td>
               </tr>
               <tr>
                 <td>
-                  <div><img alt="leather shoes"></div>
-                  <div><span>Leather shoes</span>
-                    <div>
-                      <div><span>Color:</span>
-                        <input type="radio" name="color-shoes" id="shoes-color1" checked>
-                        <label for="shoes-color1"></label>
-                        <input type="radio" name="color-shoes" id="shoes-color2">
-                        <label for="shoes-color2"></label>
+                  <div class="c-item">
+                    <div class="c-item__photo"><img src="../../../images/ui-kit/forms/item3.jpg" alt="leather shoes"></div>
+                    <div class="c-item__content"><span>Leather shoes</span>
+                      <div class="c-item__info">
+                        <div class="c-item__color"><span>Color:</span>
+                          <input type="radio" name="color-shoes" id="shoes-color1" checked>
+                          <label for="shoes-color1"></label>
+                          <input type="radio" name="color-shoes" id="shoes-color2">
+                          <label for="shoes-color2"></label>
+                        </div>
+                        <div class="c-item__size"><span>Size:</span><span class="c-item__size-number">42</span></div>
                       </div>
-                      <div><span>Size:</span><span>42</span></div>
                     </div>
                   </div>
                 </td>
                 <td>$199</td>
                 <td> 
-                  <div></div><span>1</span>
-                  <div></div>
+                  <div class="c-item__quantity">
+                    <button class="c-button--minus"></button><span>1</span>
+                    <button class="c-button--plus"></button>
+                  </div>
                 </td>
                 <td>$199</td>
               </tr>
             </table>
-            <div><span>Subtotal:</span><span>$496</span></div>
+            <div class="c-form--subtotal"><span class="c-form--subtotal-text">Subtotal:</span><span class="c-form--subtotal-quantity">$496</span></div>
           </div>
-          <div class="c-form__footer"><a href="#">Continue shopping</a>
-            <div class="button-wrapper">
-              <button> <span>Order</span></button>
+          <div class="c-form__footer c-form--cart"><a class="c-form__footer-link" href="#">Continue shopping</a>
+            <div class="button-wrapper c-form--ok">
+              <button class="c-button c--button-rounded c-form--ok"> <span class="c-form--arrow-btn">Order</span></button>
             </div>
           </div>
         </div>
@@ -286,61 +322,81 @@
     <section class="c-forms">
       <div class="c-form--full-wrapper">
         <div class="c-form c-form--address">
-          <div>
+          <div class="c-form--address-block">
             <h2 class="c-form__title">Shipping address</h2>
-            <div>
-              <label for="country--address">Select country</label>
-              <select name="country--address" id="country--address">
-                <option selected>USA</option>
-                <option>Canada</option>
-                <option>Mexica</option>
-              </select>
-            </div>
-            <div>
-              <label for="state--address">State, region, province</label>
-              <input type="text" placeholder="California" name="state--address" id="state--address">
-            </div>
-            <div>
-              <label for="address1--address">Address 1</label>
-              <input type="text" name="address1--address" id="address1--address">
-            </div>
-            <div>
-              <label for="city--address">Select city</label>
-              <select name="city--address" id="city--address">
-                <option selected>California</option>
-                <option>Washington</option>
-                <option>NY</option>
-              </select>
-            </div>
-            <div>
-              <label for="zip--address">ZIP code</label>
-              <input type="text" placeholder="95661" name="zip--address" id="zip--address">
-            </div>
-            <div>
-              <label for="address2--address">Address 2</label>
-              <input type="text" name="address2--address" id="address2--address">
+            <div class="c-form__main c-form--address">
+              <div class="input-label-wrapper">
+                <label for="country--address">Select country</label>
+                <div class="input-wrapper c-form--address c-form--select">
+                  <select class="c-form__select c-form--address" name="country--address" id="country--address">
+                    <option selected>USA</option>
+                    <option>Canada</option>
+                    <option>Mexica</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="state--address">State, region, province</label>
+                <div class="input-wrapper c-form--address">
+                  <input class="c-form__input" type="text" value="California" name="state--address" id="state--address">
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="address1--address">Address 1</label>
+                <div class="input-wrapper c-form--address">
+                  <input class="c-form__input" type="text" name="address1--address" id="address1--address">
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="city--address">Select city</label>
+                <div class="input-wrapper c-form--address c-form--select">
+                  <select class="c-form__select c-form--address" name="city--address" id="city--address">
+                    <option selected>California</option>
+                    <option>Washington</option>
+                    <option>NY</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="zip--address">ZIP code</label>
+                <div class="input-wrapper c-form--address">
+                  <input class="c-form__input" type="text" value="95661" name="zip--address" id="zip--address">
+                </div>
+              </div>
+              <div class="input-label-wrapper">
+                <label for="address2--address">Address 2</label>
+                <div class="input-wrapper c-form--address">
+                  <input class="c-form__input" type="text" name="address2--address" id="address2--address">
+                </div>
+              </div>
             </div>
           </div>
-          <div>
+          <div class="c-form--address-block">
             <h2 class="c-form__title">Contact info</h2>
-            <div>
-              <div>
+            <div class="c-form__main c-form--address">
+              <div class="input-label-wrapper">
                 <label for="name--address">Full Name</label>
-                <input type="text" placeholder="California" name="name--address" id="name--address">
+                <div class="input-wrapper c-form--address">
+                  <input class="c-form__input" type="text" value="California" name="name--address" id="name--address">
+                </div>
               </div>
-              <div>
+              <div class="input-label-wrapper">
                 <label for="email--address">E-mail</label>
-                <input type="email" placeholder="95661" name="email--address" id="email--address">
+                <div class="input-wrapper c-form--address">
+                  <input class="c-form__input" type="email" value="95661" name="email--address" id="email--address">
+                </div>
               </div>
-              <div>
+              <div class="input-label-wrapper">
                 <label for="phone--address">Phone</label>
-                <input type="tel" placeholder="California" name="phone--address" id="phone--address">
+                <div class="input-wrapper c-form--address">
+                  <input class="c-form__input" type="tel" name="phone--address" id="phone--address">
+                </div>
               </div>
             </div>
           </div>
-          <div class="c-form__footer"> <a href="#">Return to Cart</a>
-            <div class="button-wrapper">
-              <button><span>Payment method</span></button>
+          <div class="c-form__footer c-form--address"> <a class="c-form__footer-link" href="#">Return to Cart</a>
+            <div class="button-wrapper c-form--ok">
+              <button class="c-button c--button-rounded c-form--ok"><span class="c-form--arrow-btn">Payment method</span></button>
             </div>
           </div>
         </div>
@@ -349,35 +405,38 @@
     <section class="c-forms">
       <div class="c-form--full-wrapper">
         <div class="c-form c-form--payment">
-          <div>
-            <h2 class="c-form__title">Payment method</h2>
-            <div>
-              <div>
+          <div class="c-form__header c-form--payment">
+            <h2 class="c-form__title c-form--payment">Payment method</h2>
+            <h2 class="c-form__title c-form--payment">Billing address</h2>
+          </div>
+          <div class="c-form__main c-form--payment">
+            <div class="c-form__main-inputs-wrapper">
+              <div class="input-label-wrapper group">
                 <label for="credit-card">Credit card</label>
-                <div>
-                  <input type="tel" name="credit-card" id="credit-card" maxlength="4" placeholder="6594">
+                <div class="input-wrapper number">
+                  <input class="c-form__input" type="tel" name="credit-card" id="credit-card" maxlength="4" value="6594">
                 </div>
-                <div>
-                  <input type="tel" name="credit-card" maxlength="4" placeholder="6594">
+                <div class="input-wrapper number">
+                  <input class="c-form__input" type="tel" name="credit-card" maxlength="4" value="6594">
                 </div>
-                <div>
-                  <input type="tel" name="credit-card" maxlength="4" placeholder="6594">
+                <div class="input-wrapper number">
+                  <input class="c-form__input" type="tel" name="credit-card" maxlength="4" value="6594">
                 </div>
-                <div>
-                  <input type="tel" name="credit-card" maxlength="4" placeholder="6594">
+                <div class="input-wrapper number">
+                  <input class="c-form__input" type="tel" name="credit-card" maxlength="4" value="6594">
                 </div>
               </div>
-              <div>
+              <div class="input-label-wrapper">
                 <label for="cardholder-name">Cardholder name</label>
-                <div>
-                  <input type="text" name="cardholder-name" id="cardholder-name">
+                <div class="input-wrapper c-form--payment">
+                  <input class="c-form__input" type="text" name="cardholder-name" id="cardholder-name">
                 </div>
               </div>
-              <div>
+              <div class="input-label-wrapper group">
                 <label for="expire-date">Expire date</label>
-                <div>
-                  <select name="expire-date" id="expire-date">
-                    <option>Month</option>
+                <div class="input-wrapper c-form--small-select">
+                  <select class="c-form__select c-form--payment" name="expire-date" id="expire-date">
+                    <option selected>Month</option>
                     <option>01</option>
                     <option>02</option>
                     <option>03</option>
@@ -392,33 +451,34 @@
                     <option>12</option>
                   </select>
                 </div>
-                <div>
-                  <select>
-                    <option>Year</option>
+                <div class="input-wrapper c-form--small-select">
+                  <select class="c-form__select c-form--payment">
+                    <option selected>Year</option>
                     <option>2017</option>
                     <option>2018</option>
                     <option>2019</option>
                   </select>
                 </div>
               </div>
-              <div>
+              <div class="input-label-wrapper">
                 <label for="cvv">CVV</label>
-                <div>
-                  <input type="password" name="cvv" id="cvv" maxlength="3">
+                <div class="input-wrapper number">
+                  <input class="c-form__input" type="password" name="cvv" id="cvv" maxlength="3">
                 </div>
               </div>
             </div>
+            <div class="c-form__billing-address">
+              <div class="c-form__billing-address-info">
+                <div class="c-check c-form__checkbox">
+                  <input name="check-btn" type="checkbox" value="on" id="same-address" checked>
+                  <label class="c-form--payment" for="same-address">Same as shipping address</label>
+                </div><span class="c-form__billing-address-text">A hundred thousand grateful loves to your dear papa and mamma. Is your poor brother recovered of his rack-punch? Oh, dear! Oh, dear! How men should beware of wicked</span>
+              </div><span class="c-form--payment-sum">$496</span>
+            </div>
           </div>
-          <div>
-            <h2 class="c-form__title">Billing address</h2>
-            <div class="c-check">
-              <input name="check-btn" type="checkbox" value="on" id="check-btn--on" checked>
-              <label for="check-btn--on">Same as shipping address</label>
-            </div><span>A hundred thousand grateful loves to your dear papa and mamma. Is your poor brother recovered of his rack-punch? Oh, dear! Oh, dear! How men should beware of wicked</span><span>$496</span>
-          </div>
-          <div class="c-form__footer"><a href="#">Edit Shipping Address</a>
-            <div class="button-wrapper">
-              <button><span>Place Order</span></button>
+          <div class="c-form__footer c-form--payment"><a class="c-form__footer-link" href="#">Edit Shipping Address</a>
+            <div class="button-wrapper c-form--ok">
+              <button class="c-button c--button-rounded c-form--ok"><span class="c-form--arrow-btn">Place Order</span></button>
             </div>
           </div>
         </div>
