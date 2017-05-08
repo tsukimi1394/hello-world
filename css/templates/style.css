@@ -65,11 +65,10 @@ body {
 }
 
 .header {
-  background: url(../../images/header-min.jpg) no-repeat;
+  background: url(../../images/header2-min.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   text-align: center;
-  color: #fff;
   padding-bottom: 60px;
 }
 
@@ -116,7 +115,7 @@ body {
 }
 
 .icon.icon--header:hover {
-  background-color: #ff5649;
+  background-color: #ff6666;
 }
 
 .icon.icon--footer {
@@ -143,11 +142,11 @@ body {
 }
 
 .cv:hover {
-  background-color: #ff5649;
+  background-color: #ff6666;
 }
 
 .cv:hover::before {
-  background-color: #ff5649;
+  background-color: #ff6666;
 }
 
 .icon--cloud::before {
@@ -164,11 +163,13 @@ body {
 .title {
   font-size: 60px;
   font-family: 'Lobster', cursive;
+  color: #fff;
 }
 
 .subtitle {
   font-size: 25px;
   opacity: .8;
+  color: #fff;
 }
 
 .content {
