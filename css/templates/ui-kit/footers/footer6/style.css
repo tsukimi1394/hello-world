@@ -28,16 +28,24 @@
   content: "";
 }
 
-.icon.icon--linkedin:before {
+.icon.icon--instagram:before {
   content: "";
 }
 
-.icon.icon--twitter:before {
+.icon.icon--linkedin:before {
   content: "";
 }
 
-.icon.icon--vimeo:before {
+.icon.icon--scroll-down:before {
   content: "";
+}
+
+.icon.icon--twitter:before {
+  content: "";
+}
+
+.icon.icon--vimeo:before {
+  content: "";
 }
 
 * {

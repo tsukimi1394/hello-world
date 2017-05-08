@@ -53,8 +53,8 @@ gulp.task("build:icons", function() {
  gulp.task('serve', ['build:sass','views'], function(){
    browser.init({
      server: {
-       baseDir: ["./", "./templates", "./templates/ui-kite"],
-       index: "templates/ui-kite/index.html"
+       baseDir: ["./", "./templates"],
+       index: "./templates/index.html"
      }
    });
  });

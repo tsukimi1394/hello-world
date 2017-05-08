@@ -33,9 +33,19 @@ $global-font-icon: 'svg-icons';
      content: $icon-google-plus;
    }
  }
+ &.icon--instagram {
+   &:before {
+     content: $icon-instagram;
+   }
+ }
  &.icon--linkedin {
    &:before {
      content: $icon-linkedin;
+   }
+ }
+ &.icon--scroll-down {
+   &:before {
+     content: $icon-scroll-down;
    }
  }
  &.icon--twitter {

@@ -1,0 +1,18 @@
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+a {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  display: block;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
