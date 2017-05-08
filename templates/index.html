@@ -3,22 +3,39 @@
   <head>
     <title>UI-Kit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Lobster" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../css/templates/style.css">
   </head>
   <body>
     <header class="header">
-      <div class="logo"><img alt="logo"></div><a class="cv" href="#">Download my CV</a>
+      <div class="about-me about--header">
+        <div class="social"><a class="icon icon--facebook icon--header" href="https://www.facebook.com/tsukimi1394"></a><a class="icon icon--linkedin icon--header" href="https://www.linkedin.com"></a></div><a class="cv icon icon--cloud" href="#">Download my CV</a>
+      </div>
+      <h1 class="title">My Portfolio</h1>
+      <h3 class="subtitle">Projects by Ganchukova Daria</h3>
     </header>
     <div class="content">
-      <h1 class="content__title"></h1>
       <div class="portfolio">
-        <figure><a href="templates/ui-kite/index.html"><img src="" alt="ui-kit"></a>
-          <figcaption>UI-Kit</figcaption>
-        </figure>
-        <figure><a href="templates/jwood/index.html"><img src="" alt="jwood"></a>
-          <figcaption>JWood</figcaption>
-        </figure>
+        <div class="project">
+          <div class="project-img-wrapper"><a href="templates/ui-kite/index.html"><img class="project-img" src="../images/ui-kit/headers/header1-min.jpg" alt="Ui-Kit"></a></div>
+          <div class="project-info"><a class="project__title in-progress" href="templates/ui-kite/index.html">UI-Kit</a>
+            <p class="project__info">It is a set of different items used on the web-site.</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-img-wrapper"><a href="templates/jwood/index.html"><img class="project-img" src="../images/jwood/Home-min.jpg" alt="JWood"></a></div>
+          <div class="project-info"><a class="project__title" href="templates/jwood/index.html">JWood</a>
+            <p class="project__info">An example of landing page.</p>
+          </div>
+        </div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="about-me about--footer">
+        <div class="social"><a class="icon icon--facebook icon--footer" href="https://www.facebook.com/tsukimi1394"></a><a class="icon icon--linkedin icon--footer" href="https://www.linkedin.com"></a></div>
+        <div class="copy"> <span class="copy__text">Copyright &copy; 2017 </span><span class="copy__text">Ganchukova Daria</span></div>
+      </div>
+    </footer>
   </body>
 </html>

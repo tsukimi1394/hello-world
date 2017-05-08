@@ -18,6 +18,11 @@ $global-font-icon: 'svg-icons';
    /* Some common icon stuff */
  }
 
+ &.icon--cloud {
+   &:before {
+     content: $icon-cloud;
+   }
+ }
  &.icon--dribbble {
    &:before {
      content: $icon-dribbble;

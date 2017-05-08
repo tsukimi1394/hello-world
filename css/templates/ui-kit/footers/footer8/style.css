@@ -16,36 +16,40 @@
   /* Some common icon stuff */
 }
 
-.icon.icon--dribbble:before {
+.icon.icon--cloud:before {
   content: "";
 }
 
-.icon.icon--facebook:before {
+.icon.icon--dribbble:before {
   content: "";
 }
 
-.icon.icon--google-plus:before {
+.icon.icon--facebook:before {
   content: "";
 }
 
-.icon.icon--instagram:before {
+.icon.icon--google-plus:before {
   content: "";
 }
 
-.icon.icon--linkedin:before {
+.icon.icon--instagram:before {
   content: "";
 }
 
-.icon.icon--scroll-down:before {
+.icon.icon--linkedin:before {
   content: "";
 }
 
-.icon.icon--twitter:before {
+.icon.icon--scroll-down:before {
   content: "";
 }
 
-.icon.icon--vimeo:before {
+.icon.icon--twitter:before {
   content: "";
+}
+
+.icon.icon--vimeo:before {
+  content: "";
 }
 
 * {
