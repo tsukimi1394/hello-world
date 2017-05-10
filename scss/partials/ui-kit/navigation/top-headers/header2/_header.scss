@@ -1,0 +1,137 @@
+.c-nav {
+	background-color: $black;
+	display: flex;
+	justify-content: space-between;
+	&-left {
+		padding-left: 120px;
+		@include respond-to(medium-screens) {
+			padding-left: 60px;
+		}
+		@include respond-to(tablets) {
+			padding-left: 15px;
+			flex-direction: column;
+		}
+		@include respond-to(handhelds) {
+			padding-left: 15px;
+			padding-top: 18px;
+		}
+	}
+	&-right {
+		padding-top: 18px;
+		padding-bottom: 18px;
+		padding-right: 120px;
+		display: flex;
+		@include respond-to(medium-screens) {
+			padding-right: 60px;
+		}
+		@include respond-to(tablets) {
+			padding-right: 15px;
+		}
+		@include respond-to(handhelds) {
+			padding-right: 15px;
+		}
+	}
+}
+
+.c-button {
+	&.c-nav__button {
+		margin: 0;
+		padding-left: 0;
+	}
+	&.c-menu-icon {
+		background-color: transparent;
+		margin-right: 14px;
+		&:hover {
+			background-color: $orange;
+		}
+	}
+}
+
+.c-menu {
+	display: inline-block;
+	font-size: $medium-font;
+	line-height: 52px;
+	&__item {
+		color: white;
+		display: inline-block;
+		text-decoration: none;
+		padding: 10px 20px;
+		letter-spacing: $letter-spacing;
+		text-transform: capitalize;
+		font-weight: bold;
+		border-left: 1px solid rgba(0, 0, 0, .5);
+		border-right: 1px solid rgba(0, 0, 0, .5);
+		&:last-child {
+			border-right-width: 2px;
+		}
+		&:first-child {
+			border-left-width: 2px;
+		}
+		&.is-active {
+			background-color: $orange;
+			border-color: $orange;
+		}
+		&:hover {
+			background-color: $orange;
+			border-color: $orange;
+		}
+	}
+	@include respond-to(handhelds) {
+		display: none;
+	}
+}
+
+.search-wrapper {
+	&.c-nav__search {
+		width: 160px;
+		margin-right: 12px;
+	}
+}
+
+.c-search {
+	&.c-nav__search {
+		margin: 0;
+		background-color: $black-search-back;
+		color: $white;
+		border-color: $black-search-back;
+		font-weight: normal;
+		&::placeholder {
+			color: $grey-search-placeholder;
+			font-weight: bold;
+		}
+		&:focus {
+			& + .c-nav__search-icon {
+				border-color: $white;
+				&::before {
+					background-color: $white;
+				}
+			}
+		}
+	}
+}
+
+.search-icon {
+	&.c-nav__search-icon {
+		left: 17px;
+		border-color: $grey-search-placeholder;
+		&::before {
+			background-color: $grey-search-placeholder;
+		}
+	}
+}
+
+.ava-wrapper {
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	&:hover {
+		border: 2px solid $blue;
+		border-radius: $round-border-radius;
+	}
+}
+
+.c-avatar {
+	width: 100%;
+	height: auto;
+	border-radius: $round-border-radius;
+}
