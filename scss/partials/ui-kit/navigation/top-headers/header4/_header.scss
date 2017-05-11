@@ -1,29 +1,140 @@
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	font-family: 'Cabin', Arial, sans-serif;
-}
-
 .c-nav {
+	padding: 18px 120px;
+	background-color: $light-background;
 	display: flex;
-	justify-content: space-around;
-	flex-flow: wrap;
-	padding: 50px;
-	align-items: center;
-	&__img {
-		width: 295px;
-		height: auto;
+	justify-content: space-between;
+	align-content: center;
+	@include respond-to(medium-screens) {
+		padding: 16px 60px;
 	}
-	figure {
-		margin: 20px;
-		box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+	@include respond-to(tablets) {
+		padding: 16px 30px;
 	}
-	figcaption {
-		text-align: center;
-		margin-top: 15px;
+	@include respond-to(handhelds) {
+		padding: 16px;
+		flex-direction: column;
+	}
+	&-left {
+		display: flex;
+		@include respond-to(handhelds) {
+			justify-content: center;
+		}
+	}
+	&-right {
+		@include respond-to(handhelds) {
+			display: flex;
+			flex-flow: wrap;
+			justify-content: space-around;
+		}
+	}
+	&__tel {
+		display: inline-block;
+		line-height: 36px;
+		text-decoration: none;
+		font-size: $medium-font;
+		color: $dark-grey;
+		letter-spacing: $letter-spacing;
+		@include respond-to(handhelds) {
+			display: block;
+			text-align: center;
+			flex-basis: 100%;
+		}
+	}
+}
+
+.c-button {
+	&.c-menu-icon {
+		margin: 0;
+		background-color: transparent;
+		margin-right: 14px;
+		&:hover {
+			background-color: $green;
+			.c-button-square-icon.c-nav__button {
+				background-color: $white;
+				&::before {
+					background-color: $white;
+				}
+				&::after {
+					background-color: $white;
+				}
+			}
+		}
+	}
+	&-square-icon {
+		&.c-nav__button {
+			background-color: $black;
+			&::before {
+				background-color: $black;
+			}
+			&::after {
+				background-color: $black;
+			}
+		}
+	}
+	&.c-nav__button {
+		text-transform: capitalize;
+		&.c-nav__button--first-color {
+			background-color: $green;
+		}
+		&.c-nav__button--second-color {
+			background-color: $blue;
+		}
+	}
+}
+
+.c-menu {
+	font-size: 16px;
+	line-height: 36px;
+	@include respond-to(handhelds) {
+		display: none;
+	}
+	&__item {
+		display: inline-block;
+		text-decoration: none;
+		color: $black;
+		letter-spacing: $letter-spacing;
+		text-transform: capitalize;
+		margin-right: 20px;
+		&.is-active {
+			color: $green;
+		}
+		&:hover {
+			color: $green;
+		}
+	}
+}
+
+.search-wrapper {
+	&.c-nav__search {
+		position: relative;
+		width: 20px;
+		height: 35px;
+	}
+}
+
+.c-search {
+	&.c-nav__search {
+		display: none;
+	}
+}
+
+.search-icon {
+	&.c-nav__search-icon {
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%) rotate(-45deg);
+		border-color: $black;
+		&::before {
+			background-color: $black;
+			height: 5px;
+		}
+	}
+}
+
+.button-wrapper {
+	&.c-nav__button {
+		margin: 0;
+		min-width: 80px;
+		margin-left: 12px;
 	}
 }

@@ -1,33 +1,26 @@
 doctype html
 html(lang="en")
 	head
-		title= "Navigation"
+		title= "Top Header 4"
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		link(href="https://fonts.googleapis.com/css?family=Cabin:600", rel="stylesheet")
-		link(rel="stylesheet", type= "text/css", href="../../../css/templates/ui-kit/navigation/style.css")
+		link(rel="stylesheet", type= "text/css", href="../../../../../css/templates/ui-kit/navigation/top-headers/header4/style.css")
 	body
 		section(class="c-nav")
-			figure
-				a(href="top-headers/index.html")
-					img(src="../../../../images/ui-kit/navigation/top-headers-min.png", alt="top-headers", class="c-nav__img")
-				figcaption Top headers
-			figure
-				a(href="additional-headers/index.html")
-					img(src="../../../../images/ui-kit/navigation/additional-headers-min.png", alt="additional-headers", class="c-nav__img")
-				figcaption Additional headers
-			figure
-				a(href="top-headers-isolated/index.html")
-					img(src="../../../../images/ui-kit/navigation/top-headers-isolated-min.png", alt="top-headers-isolated", class="c-nav__img")
-				figcaption Top headers isolated
-			figure
-				a(href="vertical-menus/index.html")
-					img(src="../../../../images/ui-kit/navigation/vertical-menus-min.png", alt="vertical-menus", class="c-nav__img")
-				figcaption Vertical menus
-			figure
-				a(href="breadcrumbs/index.html")
-					img(src="../../../../images/ui-kit/navigation/breadcrumbs-min.png", alt="breadcrumbs", class="c-nav__img")
-				figcaption Breadcrumbs
-			figure
-				a(href="tabs/index.html")
-					img(src="../../../../images/ui-kit/navigation/tabs-min.png", alt="tabs", class="c-nav__img")
-				figcaption Tabs
+			div(class="c-nav-left")
+				button(class="c-button c--button-square c--button-rounded c--button-small c-nav__button c-menu-icon")
+						div(class="c-button-square-icon c--button-small c-nav__button")
+				nav(class="c-menu")
+					a(href="#", class="c-menu__item is-active") Products
+					a(href="#", class="c-menu__item") Prices
+					a(href="#", class="c-menu__item") About us
+					a(href="#", class="c-menu__item") Contacts
+				form(class="search-wrapper c-nav__search") 
+					input(type="search", placeholder="Search", class="c-search c-search--round c-search--small c-nav__search")
+					div(class="search-icon c-search--small c-nav__search-icon")
+			div(class="c-nav-right")
+				a(href="tel: 1-800-555-6478", class="c-nav__tel") 1-800-555-6478
+				div(class="button-wrapper c-nav__button")
+					button(class="c-button c--button-rounded c--button-small c-nav__button c-nav__button--first-color") Sign in
+				div(class="button-wrapper c-nav__button")
+					button(class="c-button c--button-rounded c--button-small c-nav__button c-nav__button--second-color") Sign up

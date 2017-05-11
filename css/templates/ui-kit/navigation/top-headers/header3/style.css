@@ -455,24 +455,24 @@ body {
   height: auto;
 }
 
-.c-button.c-nav__button {
+.c-button.c-menu-icon {
   margin: 0;
   background-color: transparent;
 }
 
-.c-button.c-nav__button:hover {
+.c-button.c-menu-icon:hover {
   background-color: #65abd0;
 }
 
-.c-button.c-nav__button:hover .c-button-square-icon.c-nav__button {
+.c-button.c-menu-icon:hover .c-button-square-icon.c-nav__button {
   background-color: #fff;
 }
 
-.c-button.c-nav__button:hover .c-button-square-icon.c-nav__button::before {
+.c-button.c-menu-icon:hover .c-button-square-icon.c-nav__button::before {
   background-color: #fff;
 }
 
-.c-button.c-nav__button:hover .c-button-square-icon.c-nav__button::after {
+.c-button.c-menu-icon:hover .c-button-square-icon.c-nav__button::after {
   background-color: #fff;
 }
 
@@ -496,6 +496,7 @@ body {
 .c-menu__item {
   display: inline-block;
   text-decoration: none;
+  letter-spacing: 0.02rem;
   color: #383737;
   text-transform: capitalize;
   margin-right: 20px;
@@ -551,14 +552,14 @@ body {
 }
 
 @media only screen and (min-width: 1025px) {
-  .c-button.c-nav__button {
+  .c-button.c-menu-icon {
     display: none;
   }
 }
 
 @media only screen and (max-width: 425px) {
   .c-nav {
-    padding: 16px 60px;
+    padding: 16px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
@@ -573,14 +574,14 @@ body {
     padding: 16px 60px;
   }
 
-  .c-button.c-nav__button {
+  .c-button.c-menu-icon {
     display: none;
   }
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .c-nav {
-    padding: 16px 60px;
+    padding: 16px 30px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
