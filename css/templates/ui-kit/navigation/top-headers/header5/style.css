@@ -5,33 +5,225 @@
 }
 
 body {
-  font-family: 'Cabin', Arial, sans-serif;
+  font-family: "Cabin", Arial, sans-serif;
 }
 
 .c-nav {
+  padding: 13px 120px;
+  background-color: #f2f5f8;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -ms-flex-flow: wrap;
-  flex-flow: wrap;
-  padding: 50px;
-  -ms-flex-align: center;
-  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.c-nav__img {
-  width: 295px;
+.c-nav__search {
+  display: -ms-flexbox;
+  display: flex;
+  width: 67.8%;
+}
+
+.c-nav__search label {
+  font-size: 16px;
+  color: #b4bbc2;
+  letter-spacing: 0.02rem;
+  padding-top: 13px;
+}
+
+.c-nav__search-input {
+  width: 100%;
+  border: 2px solid #c6ccd2;
+  border-radius: 6px;
+  color: #383737;
+  letter-spacing: 0.02rem;
+  font-size: 16px;
+  padding: 13px;
+  padding-left: 40px;
+  outline: none;
+  font-weight: bold;
+}
+
+.c-nav__search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.c-nav__search-input::-webkit-input-placeholder {
+  color: #b4bbc2;
+}
+
+.c-nav__search-input:-ms-input-placeholder {
+  color: #b4bbc2;
+}
+
+.c-nav__search-input::placeholder {
+  color: #b4bbc2;
+}
+
+.c-nav__search-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #c6ccd2;
+  border-radius: 100%;
+  transform: translateY(-50%) rotate(-45deg);
+  pointer-events: none;
+}
+
+.c-nav__search-input-icon::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 4px;
+  width: 2px;
+  height: 8px;
+  background-color: #c6ccd2;
+}
+
+.c-nav__search-input-wrapper {
+  width: 81%;
+  position: relative;
+  margin-left: 15px;
+  margin-right: 12px;
+}
+
+.c-nav__search-input:focus {
+  border-color: #65abd0;
+}
+
+.c-nav__search-input:focus + .c-nav__search-input-icon {
+  border-color: #383737;
+}
+
+.c-nav__search-input:focus + .c-nav__search-input-icon::before {
+  background-color: #383737;
+}
+
+.c-nav__search-submit {
+  width: 100%;
+  height: 100%;
+  background-color: #24aa98;
+  border: 2px solid #24aa98;
+  border-radius: 6px;
+  outline: none;
+}
+
+.c-nav__search-submit-wrapper {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.c-nav__search-submit-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  transform: translateY(-50%) rotate(-45deg);
+  pointer-events: none;
+}
+
+.c-nav__search-submit-icon::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 4px;
+  width: 2px;
+  height: 8px;
+  background-color: #fff;
+}
+
+.c-nav__search-submit:hover {
+  background-color: #1a9385;
+  border-color: #1a9385;
+  cursor: pointer;
+}
+
+.c-nav__register {
+  font-size: 16px;
+  margin-top: 13px;
+}
+
+.c-nav__register-item {
+  text-decoration: none;
+  padding: 13px;
+  color: #383737;
+  letter-spacing: 0.02rem;
+}
+
+.c-nav__register-item:not(:last-child) {
+  margin-right: 12px;
+}
+
+.c-nav__register-item:hover {
+  background-color: #65abd0;
+  color: #fff;
+  border-radius: 999rem;
+}
+
+.c-nav__register-item.is-active {
+  background-color: #65abd0;
+  color: #fff;
+  border-radius: 999rem;
+}
+
+.logo-wrapper {
+  width: 43px;
+  height: 40px;
+}
+
+.c-logo {
+  width: 100%;
   height: auto;
 }
 
-.c-nav figure {
-  margin: 20px;
-  box-shadow: 0 0 10px 5px #dddddd;
+@media only screen and (max-width: 425px) {
+  .c-nav {
+    padding: 13px 30px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .c-nav__search {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .c-nav__search label {
+    display: none;
+  }
+
+  .c-nav__search-input-wrapper {
+    margin-left: 0;
+  }
+
+  .c-nav__register {
+    text-align: center;
+    margin-bottom: 13px;
+  }
+
+  .logo-wrapper {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
 
-.c-nav figcaption {
-  text-align: center;
-  margin-top: 15px;
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .c-nav {
+    padding: 13px 60px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .c-nav__search label {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,29 +1,170 @@
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	font-family: 'Cabin', Arial, sans-serif;
-}
-
 .c-nav {
+	padding: 13px 120px;
+	background-color: $light-background;
 	display: flex;
-	justify-content: space-around;
-	flex-flow: wrap;
-	padding: 50px;
-	align-items: center;
-	&__img {
-		width: 295px;
-		height: auto;
+	justify-content: space-between;
+	@include respond-to(tablets) {
+		padding: 13px 60px;
+		justify-content: space-around;
 	}
-	figure {
-		margin: 20px;
-		box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+	@include respond-to(handhelds) {
+		padding: 13px 30px;
+		flex-direction: column;
+		justify-content: center;
 	}
-	figcaption {
-		text-align: center;
-		margin-top: 15px;
+	&__search {
+		display: flex;
+		width: 67.8%;
+		@include respond-to(handhelds) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		label {
+			font-size: $medium-font;
+			color: $dark-grey;
+			letter-spacing: $letter-spacing;
+			padding-top: 13px;
+			@include respond-to(tablets) {
+				display: none;
+			}
+			@include respond-to(handhelds) {
+				display: none;
+			}
+		}
+		&-input {
+			width: 100%;
+			border: 2px solid $grey;
+			border-radius: $smallest-border-radius;
+			color: $black;
+			letter-spacing: $letter-spacing;
+			font-size: $medium-font;
+			padding: 13px;
+			padding-left: 40px;
+			outline: none;
+			font-weight: bold;
+			&::-webkit-search-cancel-button {
+				appearance: none;
+			}
+			&::placeholder {
+				color: $dark-grey;
+			}
+			&-icon {
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				width: 15px;
+				height: 15px;
+				border: $border-width solid $grey;
+				border-radius: 100%;
+				transform: translateY(-50%) rotate(-45deg);
+				pointer-events: none;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 13px;
+					left: 4px;
+					width: 2px;
+					height: 8px;
+					background-color: $grey;
+				}
+			}
+			&-wrapper {
+				width: 81%;
+				position: relative;
+				margin-left: 15px;
+				margin-right: 12px;
+				@include respond-to(handhelds) {
+					margin-left: 0;
+				}
+			}
+			&:focus {
+				border-color: $blue;
+				& + .c-nav__search-input-icon {
+					border-color: $black;
+					&::before {
+						background-color: $black;
+					}
+				}
+			}		
+		}
+		&-submit {
+			width: 100%;
+			height: 100%;
+			background-color: $green;
+			border: 2px solid $green;
+			border-radius: $smallest-border-radius;
+			outline: none;
+			&-wrapper {
+				width: 48px;
+				height: 48px;
+				position: relative;
+			}
+			&-icon {
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				width: 15px;
+				height: 15px;
+				border: $border-width solid $white;
+				border-radius: 100%;
+				transform: translateY(-50%) rotate(-45deg);
+				pointer-events: none;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 13px;
+					left: 4px;
+					width: 2px;
+					height: 8px;
+					background-color: $white;
+				}
+			}
+			&:hover {
+				background-color: $dark-green;
+				border-color: $dark-green;
+				cursor: pointer;
+			}
+		}
 	}
+	&__register {
+		font-size: $medium-font;
+		margin-top: 13px;
+		@include respond-to(handhelds) {
+			text-align: center;
+			margin-bottom: 13px;
+		}
+		&-item {
+			text-decoration: none;
+			padding: 13px;
+			color: $black;
+			letter-spacing: $letter-spacing;
+			&:not(:last-child) {
+				margin-right: 12px;
+			}
+			&:hover {
+				background-color: $blue;
+				color: $white;
+				border-radius: $round-border-radius;
+			}
+			&.is-active {
+				background-color: $blue;
+				color: $white;
+				border-radius: $round-border-radius;
+			}
+		}
+	}
+}
+
+.logo-wrapper {
+	width: 43px;
+	height: 40px;
+	@include respond-to(handhelds) {
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+}
+
+.c-logo {
+	width: 100%;
+	height: auto;
 }
