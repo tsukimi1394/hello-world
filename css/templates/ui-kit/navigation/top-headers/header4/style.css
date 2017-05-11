@@ -501,8 +501,16 @@ body {
   background-color: #24aa98;
 }
 
+.c-button.c-nav__button.c-nav__button--first-color:hover {
+  background-color: #1a9385;
+}
+
 .c-button.c-nav__button.c-nav__button--second-color {
   background-color: #65abd0;
+}
+
+.c-button.c-nav__button.c-nav__button--second-color:hover {
+  background-color: #5093b7;
 }
 
 .c-menu {
@@ -547,6 +555,14 @@ body {
 .search-icon.c-nav__search-icon::before {
   background-color: #383737;
   height: 5px;
+}
+
+.search-icon.c-nav__search-icon:hover {
+  border-color: #24aa98;
+}
+
+.search-icon.c-nav__search-icon:hover::before {
+  background-color: #24aa98;
 }
 
 .button-wrapper.c-nav__button {

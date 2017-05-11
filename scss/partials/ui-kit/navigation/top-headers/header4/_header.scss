@@ -75,9 +75,15 @@
 		text-transform: capitalize;
 		&.c-nav__button--first-color {
 			background-color: $green;
+			&:hover {
+				background-color: $dark-green;
+			}
 		}
 		&.c-nav__button--second-color {
 			background-color: $blue;
+			&:hover {
+				background-color: $dark-blue;
+			}
 		}
 	}
 }
@@ -127,6 +133,12 @@
 		&::before {
 			background-color: $black;
 			height: 5px;
+		}
+		&:hover {
+			border-color: $green;
+			&::before {
+				background-color: $green;
+			}
 		}
 	}
 }
