@@ -534,8 +534,20 @@ body {
   font-weight: bold;
 }
 
+.c-search.c-nav__search:focus {
+  border-color: #65abd0;
+}
+
+.c-search.c-nav__search:focus + .search-icon.c-nav__search-icon {
+  border-color: #383737;
+}
+
+.c-search.c-nav__search:focus + .search-icon.c-nav__search-icon::before {
+  background-color: #383737;
+}
+
 .search-icon.c-nav__search-icon {
-  left: 20px;
+  left: 17px;
 }
 
 @media only screen and (min-width: 1025px) {

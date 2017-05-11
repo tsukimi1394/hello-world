@@ -102,11 +102,20 @@
 			color: $dark-grey;
 			font-weight: bold;
 		}
+		&:focus {
+			border-color: $blue;
+			& + .search-icon.c-nav__search-icon {
+				border-color: $black;
+				&::before {
+					background-color: $black;
+				}
+			}
+		}
 	}
 }
 
 .search-icon {
 	&.c-nav__search-icon {
-		left: 20px;
+		left: 17px;
 	}
 }
