@@ -4,26 +4,127 @@
 	margin: 0;
 }
 
-body {
-	font-family: 'Cabin', Arial, sans-serif;
+.c-nav {
+	padding: 24px 140px;
+	background-color: $light-background;
+	display: flex;
+	justify-content: space-between;
+	@include respond-to(medium-screens) {
+		padding: 24px 70px;
+	}
+	@include respond-to(tablets) {
+		padding: 24px 35px;
+	}
+	@include respond-to(handhelds) {
+		padding: 24px 20px;
+	}
+	&-left {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&-right {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__button.c-button {
+		margin: 0;
+		background-color: transparent;
+		&:hover {
+			background-color: $green;
+			.c-button-square-icon {
+				background-color: $white;
+				&::after {
+					background-color: $white;
+				}
+				&::before {
+					background-color: $white;
+				}
+			}
+		}
+	}
+	&__button.c-button-square-icon {
+		background-color: $black;
+		&::before {
+			background-color: $black;
+		}
+		&::after {
+			background-color: $black;
+		}
+	}
 }
 
-.c-nav {
+.c-menu {
+	margin-left: 35px;
+	font-size: 16px;
+	letter-spacing: $letter-spacing;
+	@include respond-to(medium-screens) {
+		margin-left: 25px;
+	}
+	@include respond-to(tablets) {
+		display: none;
+	}
+	@include respond-to(handhelds) {
+		display: none;
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-right: 30px;
+			@include respond-to(medium-screens) {
+				margin-right: 20px;
+			}
+		}
+		text-decoration: none;
+		padding: 7px;
+		color: $black;
+		text-transform: capitalize;
+		&:hover {
+			border-bottom: 2px solid $blue;
+		}
+		&.is-active {
+			border-radius: $smallest-border-radius;
+			background-color: $green;
+			color: $white;
+		}
+	}
+}
+
+.icon--settings {
+	font-size: 18px;
+	color: $black;
+	text-decoration: none;
+}
+
+.c-profile {
 	display: flex;
-	justify-content: space-around;
-	flex-flow: wrap;
-	padding: 50px;
-	align-items: center;
-	&__img {
-		width: 295px;
-		height: auto;
+	justify-content: space-between;
+	margin-left: 25px;
+	&__info {
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: $letter-spacing;
 	}
-	figure {
-		margin: 20px;
-		box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+	&__name {
+		display: block;
+		color: $black
 	}
-	figcaption {
-		text-align: center;
-		margin-top: 15px;
+	&__link {
+		display: block;
+		text-decoration: none;
+		color: $dark-grey;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
+}
+
+.ava-wrapper {
+	width: $normal-width;
+	height: $normal-height;
+	margin-right: 20px;
+}
+
+.c-avatar {
+	border-radius: $round-border-radius;
 }

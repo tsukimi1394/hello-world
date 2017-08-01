@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "svg-icons";
-  src: url("../../../../../fonts/svg-icons.eot");
-  src: url("../../../../../fonts/svg-icons.?#iefix") format("embedded-opentype"), url("../../../../../fonts/svg-icons.woff") format("woff"), url("../../../../../fonts/svg-icons.ttf") format("truetype"), url("../../../../../fonts/svg-icons.#svg-icons") format("svg");
+  src: url("../../../../../../fonts/svg-icons.eot");
+  src: url("../../../../../../fonts/svg-icons.?#iefix") format("embedded-opentype"), url("../../../../../../fonts/svg-icons.woff") format("woff"), url("../../../../../../fonts/svg-icons.ttf") format("truetype"), url("../../../../../../fonts/svg-icons.#svg-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -44,12 +44,20 @@
   content: "";
 }
 
-.icon.icon--twitter:before {
+.icon.icon--settings:before {
   content: "";
 }
 
-.icon.icon--vimeo:before {
+.icon.icon--shopping-bag:before {
   content: "";
+}
+
+.icon.icon--twitter:before {
+  content: "";
+}
+
+.icon.icon--vimeo:before {
+  content: "";
 }
 
 * {

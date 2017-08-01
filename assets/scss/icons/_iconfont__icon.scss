@@ -2,11 +2,11 @@ $global-font-icon: 'svg-icons';
 
 @font-face {
  font-family: $global-font-icon;
- src:url("../../../../../fonts/svg-icons.eot");
- src:url("../../../../../fonts/svg-icons.?#iefix") format("embedded-opentype"),
-   url("../../../../../fonts/svg-icons.woff") format("woff"),
-   url("../../../../../fonts/svg-icons.ttf") format("truetype"),
-   url("../../../../../fonts/svg-icons.#svg-icons") format("svg");
+ src:url("../../../../../../fonts/svg-icons.eot");
+ src:url("../../../../../../fonts/svg-icons.?#iefix") format("embedded-opentype"),
+   url("../../../../../../fonts/svg-icons.woff") format("woff"),
+   url("../../../../../../fonts/svg-icons.ttf") format("truetype"),
+   url("../../../../../../fonts/svg-icons.#svg-icons") format("svg");
  font-weight: normal;
  font-style: normal;
 }
@@ -51,6 +51,16 @@ $global-font-icon: 'svg-icons';
  &.icon--scroll-down {
    &:before {
      content: $icon-scroll-down;
+   }
+ }
+ &.icon--settings {
+   &:before {
+     content: $icon-settings;
+   }
+ }
+ &.icon--shopping-bag {
+   &:before {
+     content: $icon-shopping-bag;
    }
  }
  &.icon--twitter {
